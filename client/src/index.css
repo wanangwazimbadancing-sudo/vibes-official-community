@@ -1,0 +1,26 @@
+
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Playwrite+IT+Trad:wght@100..400&display=swap');             
+ @import "tailwindcss";
+* {
+ font-family: "Poppins", sans-serif;
+   }
+
+.logo {
+  font-family: "Playwrite IT Trad", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.latest-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.latest-container::-webkit-scrollbar {
+  display: none;
+}
