@@ -1,32 +1,7 @@
 import { useRef } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Heart, ShoppingCart } from 'lucide-react'
+import { products } from '../assets/ProductDummyData' 
 
-const products = [
-  {
-    name: 'Classic watch',
-    price: '$ 129.00',
-    description: 'A timeless design made for everyday wear.',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600&auto=format&fit=crop',
-  },
-  {
-    name: 'Wireless headphones',
-    price: '$ 89.00',
-    description: 'Rich sound and all-day listening comfort.',
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600&auto=format&fit=crop',
-  },
-  {
-    name: 'Everyday sneakers',
-    price: '$ 74.00',
-    description: 'Lightweight sneakers for wherever the day takes you.',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=600&auto=format&fit=crop',
-  },
-  {
-    name: 'Instant camera',
-    price: '$ 99.00',
-    description: 'Capture your favorite moments as they happen.',
-    image: 'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=600&auto=format&fit=crop',
-  },
-]
 
 const Products = () => {
   const carouselRef = useRef(null)
@@ -75,24 +50,21 @@ const Products = () => {
         {products.map((product) => (
           <article
             key={product.name}
-            className="flex w-72 min-w-0 shrink-0 snap-start flex-col bg-white border border-gray-100 "
+            className="block relative w-72 min-w-0 shrink-0 snap-start "
           >
             <img
-              className="h-48 w-full object-cover"
+              className="h-68 w-full object-cover rounded-[10px]"
               src={product.image}
               alt={product.name}
             />
-            <div className="p-4 text-sm">
+            <div className="p-4 text-sm absolute bg-white/99 backdrop-blur-[2px] w-full  bottom-[0%]">
               <p className="text-slate-600">{product.price}</p>
               <h3 className="my-1.5 text-base font-medium text-slate-800">{product.name}</h3>
-              <p className="text-slate-500">{product.description}</p>
-              <div className="mt-3 grid grid-cols-2 gap-2">
-                <button type="button" className="bg-slate-100 py-2 text-slate-600">
+              <div className="mt-3 flex justify-between items-center a gap-2">
+                <button type="button" className="bg-gray-100 w-[100px] py-2 text-gray-600">
                   Add to cart
                 </button>
-                <button type="button" className="bg-slate-800 py-2 text-white">
-                  Buy now
-                </button>
+                <Heart size={20} />
               </div>
             </div>
           </article>
