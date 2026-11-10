@@ -8,7 +8,7 @@ const Herosection = () => {
                     <div className="absolute inset-0 bg-[#f4f8fb]" />
                     <div className="relative z-10 w-full max-w-[470px] px-6 py-10 sm:px-10 lg:px-[8%]">
                         <h1 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl">
-                            Welcome to Vibes: the ultimate community for Content creation.
+                            Welcome to Vibes: the ultimate community for growth.
                         </h1>
                         <p className="mt-2 max-w-sm text-base font-medium leading-7 text-white/70">
                             This is warfare without limits. Available now.
@@ -17,7 +17,7 @@ const Herosection = () => {
                             href="#latest"
                             className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center  bg-black text-white px-2 text-base font-medium"
                         >
-                            Play Now
+                            Join Now
                         </a>
                     </div>
                 </article>
@@ -27,7 +27,7 @@ const Herosection = () => {
 
                         <div className="absolute inset-0 bg-[#f4f8fb]" />
                         <h2 className="relative max-w-[290px] px-6 py-8 text-2xl font-semibold leading-snug sm:px-8 sm:text-[28px]">
-                            Play hundreds of great games
+                            Don't Panic in 2027 Auto-mate Task 
                         </h2>
                     </article>
 
@@ -35,8 +35,8 @@ const Herosection = () => {
 
                         <div className="absolute inset-0 bg-[#f4f8fb]" />
                         <div className="relative z-10 px-3 pb-5 pt-10 text-center">
-                            <p className="text-xl font-bold tracking-tight text-[#1ed760] sm:text-2xl">Spotify</p>
-                            <h2 className="mt-2 text-sm font-semibold sm:text-base">Music and Podcasts</h2>
+                            <p className="text-xl font-bold tracking-tight text-[#1ed760] sm:text-2xl">Monitised</p>
+                            <h2 className="mt-2 text-sm font-semibold sm:text-base">Brands Monitisation</h2>
                         </div>
                     </article>
 
@@ -44,7 +44,7 @@ const Herosection = () => {
 
                         <div className="absolute inset-0 bg-[#f4f8fb]" />
                         <h2 className="relative z-10 p-4 text-base font-semibold leading-snug sm:p-5 sm:text-lg">
-                            Microsoft Flight Simulator
+                            Ochastration Tools
                         </h2>
                     </article>
                 </div>
