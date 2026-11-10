@@ -1,3 +1,4 @@
+import epsode from "../assets/videos/epsode1.mp4";
 const Herosection = () => {
     return (
         <main className=" px-3 pb-5 pt-[76px] text-black sm:px-5 sm:pt-20">
@@ -24,7 +25,9 @@ const Herosection = () => {
 
                 <div className="grid max-h-[400px]  grid-cols-2 grid-rows-[1.15fr_0.82fr] gap-3 lg:min-h-0">
                     <article className="group relative col-span-2 min-h-[230px] overflow-hidden rounded-xl">
-
+                        <video autoPlay muted loop className="absolute inset-0 h-full w-full object-cover">
+                            <source src={epsode} type="video/mp4" />
+                        </video>
                         <div className="absolute inset-0 bg-[#f4f8fb]" />
                         <h2 className="relative max-w-[290px] px-6 py-8 text-2xl font-semibold leading-snug sm:px-8 sm:text-[28px]">
                             Don't Panic in 2027 Auto-mate Task 
