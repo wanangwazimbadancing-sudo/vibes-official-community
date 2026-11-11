@@ -9,11 +9,11 @@ const NavBar = () => {
         <a href="#" className="logo text-lg " aria-label="Vibes home">Vibes</a>
 
         <div className="hidden items-center gap-8 text-sm md:flex">
+          <a href="#Apps" className="text-gray-800">Apps</a>
+          <a href="#Latest" className="text-gray-800">Latest</a>
           <a href="#Latest" className="text-gray-800">Latest</a>
           <a href="#News" className="text-gray-800 ">News</a>
           <a href="#Products" className="text-gray-800">Product</a>
-          <a href="#Blogs" className="text-gray-800">Blogs</a>
-          <a href="#Treasure" className="text-gray-800">Treasure</a>
         </div>
 
         <button
@@ -36,11 +36,11 @@ const NavBar = () => {
         id="mobile-navigation"
         className={`${open ? "flex" : "hidden"} absolute left-0 top-full w-full text-black flex-col gap-1 bg-white/95 backdrop-blur-xl px-5 py-3 text-sm border-b-[1px] border-gray-100 md:hidden`}
       >
+        
+        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Apps</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Latest</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">News</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2">Blogs</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Product</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Treasure</a>
       </div>
     </nav>
   )

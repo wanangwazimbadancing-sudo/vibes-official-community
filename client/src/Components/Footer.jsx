@@ -6,32 +6,7 @@ const Footer = () => {
         <>
 
 
-            <footer className="bg-zinc-50 pt-15 px-4 sm:px-6 md:px-8 lg:px-20">
-                <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col lg:flex-row gap-16 pb-12">
-                        <div className="flex-1 max-w-full gap-8 lg:max-w-[400px]">
-                            <p className="text-xl logo text-zinc-800">Vibes24_7</p>
-
-                        </div>
-
-                        <div className="flex flex-wrap sm:flex-nowrap flex-1 justify-between gap-8 w-full max-w-3xl">
-                            {links.map((link, index) => (
-                                <div key={index}>
-                                    <h3 className="text-base font-medium text-zinc-800 mb-6">{link.title}</h3>
-                                    <ul className="flex flex-col gap-3 list-none">
-                                        {link.items.map((item, itemIndex) => (
-                                            <li key={itemIndex}>
-                                                <a href={item.href} className="text-sm text-zinc-500 hover:text-zinc-700 transition-colors">{item.name}</a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-
-
+            <footer className=" pt-15 px-4 sm:px-6 md:px-8 lg:px-20">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-gray-200">
                         <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} Vibes24_7. All Rights Reserved.</p>
                                                     <div className="flex gap-4">
@@ -46,7 +21,6 @@ const Footer = () => {
                                 </a>
                             </div>
                     </div>
-                </div>
             </footer>
         </>
     )

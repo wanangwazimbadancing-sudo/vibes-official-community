@@ -17,6 +17,10 @@ pnpm-debug.log*
 dist/
 build/
 
+# Large episode videos are kept locally, not in Git.
+client/src/assets/videos/epsode1.mp4
+client/src/assets/videos/epsode2.mp4
+
 # System files
 .DS_Store
 Thumbs.db
