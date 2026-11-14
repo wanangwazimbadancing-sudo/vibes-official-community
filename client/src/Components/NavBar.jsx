@@ -13,7 +13,7 @@ const NavBar = () => {
           <a href="#Latest" className="text-gray-800">Latest</a>
           <a href="#Latest" className="text-gray-800">Latest</a>
           <a href="#News" className="text-gray-800 ">News</a>
-          <a href="#Products" className="text-gray-800">Product</a>
+          <a href="#Contact" className="text-gray-800 ">contact</a>
         </div>
 
         <button
@@ -40,7 +40,7 @@ const NavBar = () => {
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Apps</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Latest</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">News</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Product</a>
+        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">contact</a>
       </div>
     </nav>
   )

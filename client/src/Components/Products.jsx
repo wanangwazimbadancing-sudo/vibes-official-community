@@ -1,9 +1,5 @@
 const Products = () => {
-  return (
-    <div>
-      products unavailable for now.
-    </div>
-  )
+  return <div />
 }
 
 export default Products
