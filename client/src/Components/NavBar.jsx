@@ -11,7 +11,6 @@ const NavBar = () => {
         <div className="hidden items-center gap-8 text-sm md:flex">
           <a href="#Apps" className="text-gray-800">Apps</a>
           <a href="#Latest" className="text-gray-800">Latest</a>
-          <a href="#Latest" className="text-gray-800">Latest</a>
           <a href="#News" className="text-gray-800 ">News</a>
           <a href="#Contact" className="text-gray-800 ">contact</a>
         </div>
