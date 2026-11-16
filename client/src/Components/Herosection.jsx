@@ -1,4 +1,5 @@
 import hero from "../assets/Herosection.png";
+import { Link } from "react-router-dom"
 import { WorkflowIcon} from "lucide-react"
 const Herosection = () => {
     return (
@@ -23,12 +24,12 @@ const Herosection = () => {
                         <p className="mt-2 max-w-sm text-base font-medium leading-7 text-gray-700/70">
                             This is warfare without limits. Available now.
                         </p>
-                        <a
-                            href="#latest"
+                        <Link
+                            to="/join"
                             className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-black px-2 text-base font-medium text-white"
                         >
                             Join Now
-                        </a>
+                        </Link>
                     </div>
                 </article>
 
