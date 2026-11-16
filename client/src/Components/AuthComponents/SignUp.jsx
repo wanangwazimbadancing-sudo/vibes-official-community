@@ -16,7 +16,7 @@ const nav = useNavigate()
 
               <fieldset>
                <label className="font-medium" htmlFor="email">Name</label>
-            <input id="email" className="w-full border mt-1.5 mb-4 border-gray-500/30 outline-none rounded py-2.5 px-3" type="email" placeholder="Enter Name" required />
+            <input id="username" className="w-full border mt-1.5 mb-4 border-gray-500/30 outline-none rounded py-2.5 px-3" type="text" placeholder="Enter Name" required />
             <label className="font-medium" htmlFor="email">Email</label>
             <input id="email" className="w-full border mt-1.5 mb-4 border-gray-500/30 outline-none rounded py-2.5 px-3" type="email" placeholder="Enter email" required />
             <div className="flex items-center justify-between">
