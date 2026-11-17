@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-const News = () => {
+const Stores = () => {
   const carouselRef = useRef(null)
 
   const scrollCarousel = (direction) => {
@@ -19,8 +19,8 @@ const News = () => {
 
   return (
 <>
-<div id='News' className="flex items-center justify-between mt-10 ml-4 mr-4 mx-auto">
-    <p className='font-semibold'>News</p>
+<div id='Store' className="flex items-center justify-between mt-10 ml-4 mr-4 mx-auto">
+    <p className='font-semibold'>Stores</p>
 
     <span className='flex gap-2'>
       <button
@@ -60,4 +60,4 @@ const News = () => {
   )
 }
 
-export default News
+export default Stores

@@ -12,14 +12,14 @@ const NavBar = () => {
   return (
 <>
 
-    <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/95 px-4 py-4  backdrop-blur-md sm:px-6 md:px-16 lg:px-24 xl:px-32">
+    <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/65 px-4 py-4  backdrop-blur-3xl sm:px-6 md:px-16 lg:px-24 xl:px-32">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
         <a href="#" className="logo text-lg " aria-label="Vibes home">Vibes</a>
 
         <div className="hidden items-center gap-8 text-sm md:flex">
           <a href="#Apps" className="text-gray-800">Apps</a>
           <a href="#trends" className="text-gray-800">Trends</a>
-          <a href="#News" className="text-gray-800 ">News</a>
+          <a href="#Stores" className="text-gray-800 ">Stores</a>
           <a href="#Contact" className="text-gray-800 ">contact</a>
         </div>
 
@@ -32,7 +32,7 @@ const NavBar = () => {
      
 </span>
 
- <Link  to="/join"  className="inline-flex min-h-8 min-w-20 items-center justify-center bg-black px-1  text-sm text-white "> sign Up </Link>
+ <Link  to="/join"  className="hidden lg:inline-flex min-h-8 min-w-20 items-center justify-center bg-black px-1  text-sm text-white "> sign Up </Link>
 
  </div>
 
@@ -46,7 +46,7 @@ const NavBar = () => {
         
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Apps</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Latest</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">News</a>
+        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Stores</a>
         <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">contact</a>
       </div>
     </nav>
