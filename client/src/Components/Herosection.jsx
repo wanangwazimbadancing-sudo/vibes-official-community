@@ -26,7 +26,7 @@ const Herosection = () => {
                         </p>
                         <Link
                             to="/join"
-                            className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-black px-2 text-base font-medium text-white"
+                            className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-[teal] px-2 text-base font-medium text-white"
                         >
                             Join Now
                         </Link>
