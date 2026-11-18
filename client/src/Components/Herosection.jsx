@@ -14,19 +14,19 @@ const Herosection = () => {
                     <img
                         src={hero}
                         alt="Hero portrait"
-                        className="absolute bottom-5 right-[2%] hidden h-86 w-78 object-cover object-center lg:block"
+                        className="absolute bottom-5 right-[0%] hidden h-full w-full object-cover object-center lg:block"
                     />
 
                     <div className="relative z-10 w-full max-w-[470px] px-6 py-10 sm:px-10 lg:px-[8%]">
                         <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
-                            Welcome to Vibes Empire: the community for growth.
+                            Vibes Empire: 
                         </h1>
-                        <p className="mt-2 max-w-sm text-base font-medium leading-7 text-gray-700/70">
-                            This is warfare without limits. Available now.
+                        <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-gray-800/95 sm:text-2xl">
+                            The social market playground for unlimited leads.
                         </p>
                         <Link
                             to="/join"
-                            className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-[teal] px-2 text-base font-medium text-white"
+                            className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-white px-2 text-base font-medium text-black shadow-sm"
                         >
                             Join Now
                         </Link>
