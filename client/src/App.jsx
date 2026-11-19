@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from "react-router-dom"
+import {  Route, Routes } from "react-router-dom"
 import FAQ from "./Components/FAQ"
 import Footer from "./Components/Footer"
 import Herosection from "./Components/Herosection"
@@ -9,11 +9,19 @@ import Stores from "./Components/Stores"
 import Login from "./Components/AuthComponents/Login"
 import Verification from "./Components/AuthComponents/Verification"
 import PasswordReset from "./Components/AuthComponents/PasswordReset"
+import PagenotFound from "./Components/ErrorHandlers/PagenotFound"
 
 const App = () => {
   return (
-<HashRouter>
+
+    <div className="App">
+
       <Routes>
+
+{/*---------------------- landing page--------------------- */}
+
+
+
       <Route
         path="/"
         element={
@@ -27,12 +35,24 @@ const App = () => {
           </>
         }
       />
+
+        {/*------------ Auth Routes ----------------*/}
+
       <Route path="/join" element={<SignUp />} />
       <Route path="/login" element={<Login />} />
       <Route path="/resetpassword" element={<PasswordReset />} />
       <Route path="/verify" element={<Verification />} />
+
+        {/*------------------ error handlers ----------------- */}
+      <Route path='/page1'  element={<PagenotFound/>}/>
     </Routes>
-</HashRouter>
+
+
+    </div>
+
+
+
+
   )
 }
 
