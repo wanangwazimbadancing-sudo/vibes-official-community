@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom"
+import { HashRouter, Route, Routes } from "react-router-dom"
 import FAQ from "./Components/FAQ"
 import Footer from "./Components/Footer"
 import Herosection from "./Components/Herosection"
@@ -12,7 +12,8 @@ import PasswordReset from "./Components/AuthComponents/PasswordReset"
 
 const App = () => {
   return (
-    <Routes>
+<HashRouter>
+      <Routes>
       <Route
         path="/"
         element={
@@ -31,6 +32,7 @@ const App = () => {
       <Route path="/resetpassword" element={<PasswordReset />} />
       <Route path="/verify" element={<Verification />} />
     </Routes>
+</HashRouter>
   )
 }
 

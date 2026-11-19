@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import {AlignRight,ChevronRight,Moon,  Sun, X} from "lucide-react"
+import {AlignRight,ChevronRight,LogIn,Moon,  Sun, X} from "lucide-react"
 
 
 const NavBar = () => {
@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
 <>
 
-    <nav className="fixed  bg-white/90 backdrop-blur-[12px]  top-0 z-50 w-full  px-4 py-4   sm:px-6 md:px-16 lg:px-24 xl:px-32">
+    <nav className="fixed  bg-white/90 backdrop-blur-[12px]  top-0 z-50 w-full border-b border-gray-200  px-4 py-4   sm:px-6 md:px-16 lg:px-24 xl:px-32">
       
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
 
@@ -47,7 +47,10 @@ const NavBar = () => {
 {/*--------------------- auth buttons ------------- */}
 
 <span className="flex gap-2">
-   <Link  to="/login"  className="md:flex hidden min-h-8 min-w-20 items-center justify-center bg-[aliceblue] px-1  text-sm  rounded-md "> login </Link>
+ <Link to="login"  className="bg-white text-gray-500 active:scale-95 transition text-sm flex items-center px-4 py-2 gap-2 rounded w-max border border-gray-500/30">
+                <LogIn size={14} />
+                 login
+            </Link>
  <Link  to="/join"  className="md:flex hidden min-h-8 min-w-20 items-center justify-center bg-black px-1  text-sm text-white rounded-md"> sign Up </Link>
 
 </span>
