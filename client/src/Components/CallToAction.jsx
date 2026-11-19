@@ -1,4 +1,5 @@
 import { Rocket } from "lucide-react"
+import { Link } from "react-router-dom"
 
 const CallToAction = () => {
 
@@ -14,9 +15,11 @@ return (
                     <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">Marketing leads</span> 
                      
                 </h2>
-                <p className="text-slate-500 mt-2 max-w-lg max-md:text-sm">Achieve your goals faster with personalized strategies, hands-on support, and results that speak for themselves.</p>
-                <button type="button" className="bg-[teal] text-white text-sm px-5 py-2.5 rounded-xl font-medium mt-4 hover:scale-105 active:scale-95 transition-all duration-300"> 
-                    Get Started Today
+                <p className="text-slate-500 mt-2 max-w-lg max-md:text-sm">Achieve your goals fast, safe automated tools</p>
+                <button type="button" className="bg-[#8bddae] text-white text-sm px-5 py-2.5 rounded-xl font-medium mt-4 hover:scale-105 active:scale-95 transition-all duration-300"> 
+                    <Link to="/join" className="flex items-center gap-2">
+                        Join Now
+                    </Link>
                 </button>
             </div>
         </div>

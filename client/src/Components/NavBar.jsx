@@ -70,13 +70,36 @@ const NavBar = () => {
 
       <div
         id="mobile-navigation"
-        className={`${open ? "flex h-[100dvh] " : "hidden"} absolute left-0 top-full w-full text-black flex-col gap-1 bg-white backdrop-blur-2xl px-5 py-3 text-sm border-b-[1px] border-gray-100 md:hidden`}
+        aria-hidden={!open}
+        inert={!open}
+        className={`absolute inset-x-0 top-full h-[calc(100dvh-73px)] bg-black/20 transition-colors duration-300 md:hidden ${open ? "pointer-events-auto" : "pointer-events-none bg-transparent"}`}
       >
-        
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Apps</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Latest</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">Stores</a>
-        <a href="#" onClick={() => setOpen(false)} className="rounded px-3 py-2 ">contact</a>
+        <div
+          className={`flex h-full w-full flex-col overflow-y-auto overscroll-contain bg-white px-5 py-6 text-sm text-black shadow-xl transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
+        >
+          <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
+            <a href="#Apps" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              Apps <ChevronRight size={18} aria-hidden="true" />
+            </a>
+            <a href="#Latest" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              Latest <ChevronRight size={18} aria-hidden="true" />
+            </a>
+            <a href="#Store" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              Stores <ChevronRight size={18} aria-hidden="true" />
+            </a>
+            <a href="#contact" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              Contact <ChevronRight size={18} aria-hidden="true" />
+            </a>
+          </nav>
+          <div className="mt-6 grid grid-cols-2 gap-3 border-t border-zinc-100 pt-6">
+            <Link to="/login" onClick={() => setOpen(false)} className="flex min-h-12 items-center justify-center rounded-lg border border-zinc-300 px-4 text-base font-medium text-zinc-900 transition-colors hover:bg-zinc-50">
+              Log in
+            </Link>
+            <Link to="/join" onClick={() => setOpen(false)} className="flex min-h-12 items-center justify-center rounded-lg bg-zinc-950 px-4 text-center text-base font-medium text-white transition-colors hover:bg-zinc-800">
+              Get started
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
 

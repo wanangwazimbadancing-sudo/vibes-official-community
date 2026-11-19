@@ -42,11 +42,7 @@ const Herosection = () => {
                             style={{ backgroundColor: background }}
                             aria-hidden={activeSlide !== index}
                         >
-                            <img
-                                src={hero}
-                                alt=""
-                                className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain"
-                            />
+                            <img src={hero} alt="" className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain" />
 
                             <div
                                 className="absolute inset-0 z-[5]"
