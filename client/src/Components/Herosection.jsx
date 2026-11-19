@@ -1,35 +1,77 @@
 import hero from "../assets/Herosection.png";
 import { Link } from "react-router-dom"
 import { WorkflowIcon} from "lucide-react"
+import { useEffect, useState } from "react"
+import { heroSlides } from "../assets/HeroSectionDummyData";
+
+
 const Herosection = () => {
+    const [activeSlide, setActiveSlide] = useState(0)
+
+    useEffect(() => {
+        const timer = window.setInterval(() => {
+            setActiveSlide((current) => (current + 1) % heroSlides.length)
+        }, 5000)
+
+        return () => window.clearInterval(timer)
+    }, [])
+
     return (
         <main id="Apps" className="px-3 pb-5 pt-[76px] text-black sm:px-5 sm:pt-20">
             <section
                 aria-label="main Hero"
                 className="mx-auto grid w-full max-w-[1680px] grid-cols-1 gap-3 lg:h-[min(74vh,720px)] lg:min-h-[450px] lg:grid-cols-[1.56fr_1fr]"
             >
-                <article className="relative flex max-h-[440px] items-center overflow-hidden rounded-xl sm:min-h-[560px] lg:min-h-0">
-                    <div className="absolute inset-0 bg-[#f4f8fb]/70" />
-
-                    <img
-                        src={hero}
-                        alt="Hero portrait"
-                        className="absolute bottom-5 right-[0%] hidden h-full w-full object-cover object-center lg:block"
-                    />
-
-                    <div className="relative z-10 w-full max-w-[470px] px-6 py-10 sm:px-10 lg:px-[8%]">
-                        <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
-                            Vibes Empire: 
-                        </h1>
-                        <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-gray-800/95 sm:text-2xl">
-                            The social market playground for unlimited leads.
-                        </p>
-                        <Link
-                            to="/join"
-                            className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-white px-2 text-base font-medium text-black shadow-sm"
+                <article
+                    className="relative flex max-h-[440px] items-center overflow-hidden rounded-xl sm:min-h-[560px] lg:min-h-0"
+                    aria-roledescription="carousel"
+                    aria-label="Vibes Empire features"
+                >
+                    {heroSlides.map((slide, index) => (
+                        <div
+                            key={slide.title}
+                            className={`absolute inset-0 transition-opacity duration-700 ${slide.background} ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                            aria-hidden={activeSlide !== index}
                         >
-                            Join Now
-                        </Link>
+                            <img
+                                src={hero}
+                                alt=""
+                                className="absolute bottom-0 right-0 hidden h-full w-[72%] object-contain object-right-bottom lg:block"
+                            />
+
+                            <div className="relative z-10 flex h-full w-full max-w-[470px] flex-col justify-center px-6 py-10 sm:px-10 lg:px-[8%]">
+                                <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
+                                    {slide.title}
+                                </h1>
+                                <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-gray-800/95 sm:text-2xl">
+                                    {slide.description}
+                                </p>
+                                <Link
+                                    to="/join"
+                                    className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-white px-2 text-base font-medium text-black shadow-sm"
+                                >
+                                    Join Now
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
+
+                    <div className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 gap-2" role="tablist" aria-label="Choose hero slide">
+                        {heroSlides.map((slide, index) => (
+                            <button
+                                key={slide.title}
+                                type="button"
+                                role="tab"
+                                aria-label={`Show slide ${index + 1}: ${slide.title}`}
+                                aria-selected={activeSlide === index}
+                                onClick={() => setActiveSlide(index)}
+                                className={`h-3.5 w-3.5 rounded-full transition-all duration-300 ${
+                                    activeSlide === index
+                                        ? "scale-110 bg-gray-500"
+                                        : "bg-gray-300 hover:bg-gray-400"
+                                }`}
+                            />
+                        ))}
                     </div>
                 </article>
 
