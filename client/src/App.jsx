@@ -1,15 +1,15 @@
 import {  Route, Routes } from "react-router-dom"
-import FAQ from "./Components/FAQ"
-import Footer from "./Components/Footer"
-import Herosection from "./Components/Herosection"
-import Latest from "./Components/Latest"
-import NavBar from "./Components/NavBar"
+
 import SignUp from "./Components/AuthComponents/SignUp"
-import Stores from "./Components/Stores"
 import Login from "./Components/AuthComponents/Login"
 import Verification from "./Components/AuthComponents/Verification"
 import PasswordReset from "./Components/AuthComponents/PasswordReset"
 import PagenotFound from "./Components/ErrorHandlers/PagenotFound"
+
+//------------------- Landing page -------------------//
+
+
+import LandingPage from "./pages/LandingPage"
 
 const App = () => {
   return (
@@ -22,19 +22,7 @@ const App = () => {
 
 
 
-      <Route
-        path="/"
-        element={
-          <>
-            <NavBar />
-            <Herosection />
-            <Latest />
-            <Stores />
-            <FAQ />
-            <Footer />
-          </>
-        }
-      />
+      <Route path="/" element={<LandingPage /> }/>
 
         {/*------------ Auth Routes ----------------*/}
 
@@ -43,8 +31,8 @@ const App = () => {
       <Route path="/resetpassword" element={<PasswordReset />} />
       <Route path="/verify" element={<Verification />} />
 
-        {/*------------------ error handlers ----------------- */}
-      <Route path='/page1'  element={<PagenotFound/>}/>
+   {/*------------------ error handlers ----------------- */}
+      <Route path='*'  element={<PagenotFound/>}/>
     </Routes>
 
 
