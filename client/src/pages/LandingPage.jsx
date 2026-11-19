@@ -1,3 +1,5 @@
+
+import Contact from "../Components/Contact"
 import FAQ from "../Components/FAQ"
 import Footer from "../Components/Footer"
 import Herosection from "../Components/Herosection"
@@ -14,6 +16,7 @@ const LandingPage = () => {
             <Latest />
             <Stores />
             <FAQ />
+            <Contact />
             <Footer />
 
 

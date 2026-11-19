@@ -4,6 +4,14 @@ import { WorkflowIcon} from "lucide-react"
 import { useEffect, useState } from "react"
 import { heroSlides } from "../assets/HeroSectionDummyData";
 
+const hexToRgba = (hex, alpha) => {
+    const value = hex.replace("#", "")
+    const red = Number.parseInt(value.slice(0, 2), 16)
+    const green = Number.parseInt(value.slice(2, 4), 16)
+    const blue = Number.parseInt(value.slice(4, 6), 16)
+
+    return `rgba(${red}, ${green}, ${blue}, ${alpha})`
+}
 
 const Herosection = () => {
     const [activeSlide, setActiveSlide] = useState(0)
@@ -27,10 +35,11 @@ const Herosection = () => {
                     aria-roledescription="carousel"
                     aria-label="Vibes Empire features"
                 >
-                    {heroSlides.map((slide, index) => (
+                    {heroSlides.map(({background, title, description}, index) => (
                         <div
-                            key={slide.title}
-                            className={`absolute inset-0 transition-opacity duration-700 ${slide.background} ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                            key={title}
+                            className={`absolute inset-0 transition-opacity duration-700 ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                            style={{ backgroundColor: background }}
                             aria-hidden={activeSlide !== index}
                         >
                             <img
@@ -39,12 +48,22 @@ const Herosection = () => {
                                 className="absolute bottom-0 right-0 hidden h-full w-[72%] object-contain object-right-bottom lg:block"
                             />
 
-                            <div className="relative z-10 flex h-full w-full max-w-[470px] flex-col justify-center px-6 py-10 sm:px-10 lg:px-[8%]">
+                            <div
+                                className="absolute inset-0 z-[5]"
+                                aria-hidden="true"
+                                style={{
+                                    backgroundImage: `linear-gradient(to right, ${background} 0%, ${background} 22%, ${hexToRgba(background, 0.96)} 38%, ${hexToRgba(background, 0.72)} 52%, ${hexToRgba(background, 0.18)} 72%, ${hexToRgba(background, 0)} 100%)`,
+                                }}
+                            />
+
+                            <div
+                                className="relative z-10 flex h-full w-full max-w-[470px] flex-col justify-center px-6 py-10 sm:px-10 lg:px-[8%]"
+                            >
                                 <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
-                                    {slide.title}
+                                    {title}
                                 </h1>
                                 <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-gray-800/95 sm:text-2xl">
-                                    {slide.description}
+                                    {description}
                                 </p>
                                 <Link
                                     to="/join"
