@@ -31,7 +31,7 @@ const Herosection = () => {
                 className="mx-auto grid w-full max-w-[1680px] grid-cols-1 gap-3 lg:h-[min(74vh,720px)] lg:min-h-[450px] lg:grid-cols-[1.56fr_1fr]"
             >
                 <article
-                    className="relative flex max-h-[440px] items-center overflow-hidden rounded-xl sm:min-h-[560px] lg:min-h-0"
+                    className="relative flex h-[300px] items-center overflow-hidden rounded-xl sm:h-[420px] lg:h-full lg:min-h-0"
                     aria-roledescription="carousel"
                     aria-label="Vibes Empire features"
                 >
@@ -45,7 +45,7 @@ const Herosection = () => {
                             <img
                                 src={hero}
                                 alt=""
-                                className="absolute bottom-0 right-0 hidden h-full w-[72%] object-contain object-right-bottom lg:block"
+                                className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain"
                             />
 
                             <div
@@ -84,7 +84,7 @@ const Herosection = () => {
                                 aria-label={`Show slide ${index + 1}: ${slide.title}`}
                                 aria-selected={activeSlide === index}
                                 onClick={() => setActiveSlide(index)}
-                                className={`h-3.5 w-3.5 rounded-full transition-all duration-300 ${
+                                className={`h-2 w-2 rounded-full transition-all duration-300 ${
                                     activeSlide === index
                                         ? "scale-110 bg-gray-500"
                                         : "bg-gray-300 hover:bg-gray-400"

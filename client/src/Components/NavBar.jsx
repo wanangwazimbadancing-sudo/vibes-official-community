@@ -47,7 +47,7 @@ const NavBar = () => {
 {/*--------------------- auth buttons ------------- */}
 
 <span className="flex gap-2">
- <Link to="login"  className="bg-white text-gray-500 active:scale-95 transition text-sm flex items-center px-4 py-2 gap-2 rounded w-max border border-gray-500/30">
+ <Link to="login"  className="md:flex hidden text-gray-500 active:scale-95 transition text-sm flex items-center px-4 py-2 gap-2 rounded w-max border border-gray-400/30">
                 <LogIn size={14} />
                  login
             </Link>
