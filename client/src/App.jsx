@@ -4,7 +4,7 @@ import SignUp from "./Components/AuthComponents/SignUp"
 import Login from "./Components/AuthComponents/Login"
 import Verification from "./Components/AuthComponents/Verification"
 import PasswordReset from "./Components/AuthComponents/PasswordReset"
-import PagenotFound from "./Components/ErrorHandlers/PagenotFound"
+import PagenotFound from "./Components/AlertComponents/PagenotFound"
 
 //------------------- Landing page -------------------//
 
@@ -12,8 +12,51 @@ import PagenotFound from "./Components/ErrorHandlers/PagenotFound"
 import LandingPage from "./pages/LandingPage"
 import AuthenticatedUser from "./pages/AuthenticatedUser"
 import Footer from "./Components/Footer"
+import { useEffect, useState } from "react"
+import NetworkError from "./Components/AlertComponents/NetworkError"
 
 const App = () => {
+
+//------------- internet connection
+
+  const[isOnline, setIsOnline] = useState(navigator.onLine);
+  const [showOnline, setShowOnline] = useState(navigator.onLine);
+ const handleOnlineStatus = () => {
+    setIsOnline(navigator.onLine);
+  }
+
+  useEffect(() => {
+    if (!isOnline) {
+      setShowOnline(false);
+      return;
+    }
+
+    setShowOnline(true);
+    const timeoutId = window.setTimeout(() => setShowOnline(false), 5000);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [isOnline]);
+
+  useEffect(() => {
+    window.addEventListener('online', handleOnlineStatus);
+    window.addEventListener('offline', handleOnlineStatus);
+
+    return () => {
+      window.removeEventListener('online', handleOnlineStatus);
+      window.removeEventListener('offline', handleOnlineStatus);
+    };
+  }, []);
+
+
+
+
+
+
+
+
+
+
+
   return (
 
     <div className="App">
@@ -38,6 +81,9 @@ const App = () => {
       <Route path='*'  element={<PagenotFound/>}/>
     </Routes>
 
+{/*----------- offline alert ----------- */}
+
+{!isOnline && (<NetworkError />)}
 
 
 <Footer />
