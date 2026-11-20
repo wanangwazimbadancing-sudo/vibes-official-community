@@ -9,7 +9,7 @@ const handleRetry = () => {
 
 
 
-        <div className="fixed bottom-4 left-5 flex items-center justify-between max-w-80 w-full bg-red-600/30 backdrop-blur-[20px] text-red-600 px-3 h-10 rounded-md ">
+        <div className="fixed bottom-4 left-5 flex items-center justify-between max-w-80 w-full bg-red-600/30 backdrop-blur-[20px] text-red-600 px-3 h-10 rounded-md z-111111 ">
             <div className="flex items-center">
                <WifiOff className='w-7 h-7' />
                 <p className="text-sm ml-2">Oops! Your are offline.</p>

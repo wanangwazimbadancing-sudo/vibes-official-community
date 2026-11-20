@@ -26,6 +26,8 @@ body {
   display: none;
 }
 
+/*--------------- animations -------------------*/
+
 .online-status {
   animation: online-status-disappear 5s ease forwards;
 }
@@ -41,3 +43,22 @@ body {
     transform: translateY(100%);
   }
 }
+
+
+                   @keyframes scroll-up {
+                        0% {
+                            transform: translateY(0);
+                        }
+                        100% {
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .animate-scroll-up-1 {
+                        animation: scroll-up 25s linear infinite;
+                    }
+                    .animate-scroll-up-2 {
+                        animation: scroll-up 30s linear infinite;
+                    }
+                    .animate-scroll-up-3 {
+                        animation: scroll-up 20s linear infinite; 
+                    }

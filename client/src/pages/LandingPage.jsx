@@ -1,9 +1,9 @@
-
-import { useEffect, useState } from "react"
-import CallToAction from "../Components/CallToAction"
-import FAQ from "../Components/FAQ"
+import FAQ from "../Components/LandingPageComponents/FAQ"
 import Herosection from "../Components/Herosection"
 import NavBar from "../Components/NavBar"
+import Testimonial from "../Components/LandingPageComponents/Testimonial"
+import CallToAction from "../Components/LandingPageComponents/CallToAction"
+import About from "../Components/LandingPageComponents/About"
 
 
 const LandingPage = () => {
@@ -17,6 +17,8 @@ const LandingPage = () => {
            
             <NavBar />
             <Herosection />
+            <About />
+            <Testimonial />
             <FAQ />
             <CallToAction />
             
