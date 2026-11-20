@@ -29,6 +29,9 @@ const SignUp = () => {
 
 
         </form>
+
+
+        
 </div>
   )
 }

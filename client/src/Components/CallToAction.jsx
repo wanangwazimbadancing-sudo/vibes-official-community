@@ -16,7 +16,7 @@ return (
                      
                 </h2>
                 <p className="text-slate-500 mt-2 max-w-lg max-md:text-sm">Achieve your goals fast, safe automated tools</p>
-                <button type="button" className="bg-[#8bddae] text-white text-sm px-5 py-2.5 rounded-xl font-medium mt-4 hover:scale-105 active:scale-95 transition-all duration-300"> 
+                <button type="button" className="bg-[#000000] text-white text-sm px-5 py-2.5 rounded-xl font-medium mt-4 hover:scale-105 active:scale-95 transition-all duration-300"> 
                     <Link to="/join" className="flex items-center gap-2">
                         Join Now
                     </Link>

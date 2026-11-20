@@ -2,11 +2,8 @@
 import { useEffect, useState } from "react"
 import CallToAction from "../Components/CallToAction"
 import FAQ from "../Components/FAQ"
-import Footer from "../Components/Footer"
 import Herosection from "../Components/Herosection"
-import Latest from "../Components/Latest"
 import NavBar from "../Components/NavBar"
-import Stores from "../Components/Stores"
 
 
 const LandingPage = () => {
@@ -46,11 +43,8 @@ const LandingPage = () => {
            
             <NavBar />
             <Herosection />
-            <Latest />
-            <Stores />
             <FAQ />
             <CallToAction />
-            <Footer />
             
         {isOnline ? (showOnline && <p className="online-status fixed bg-[#10f300] text-white grid place-items-center w-full h-6 bottom-0">Online</p>) : (<p className="fixed bg-black text-white grid place-items-center w-full h-6 bottom-0">Offline</p>)}
 

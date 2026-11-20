@@ -10,6 +10,8 @@ import PagenotFound from "./Components/ErrorHandlers/PagenotFound"
 
 
 import LandingPage from "./pages/LandingPage"
+import AuthenticatedUser from "./pages/AuthenticatedUser"
+import Footer from "./Components/Footer"
 
 const App = () => {
   return (
@@ -18,11 +20,12 @@ const App = () => {
 
       <Routes>
 
-{/*---------------------- landing page--------------------- */}
+{/*----------------------  pages --------------------- */}
 
 
 
       <Route path="/" element={<LandingPage /> }/>
+      <Route path="/auth" element={<AuthenticatedUser /> }/>
 
         {/*------------ Auth Routes ----------------*/}
 
@@ -36,6 +39,8 @@ const App = () => {
     </Routes>
 
 
+
+<Footer />
     </div>
 
 
