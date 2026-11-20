@@ -7,7 +7,7 @@ const Footer = () => {
 
 
             <footer className=" pt-15 px-4 sm:px-6 md:px-8 lg:px-20">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-gray-200">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-gray-200 pb-4">
                         <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} Vibes24_7. All Rights Reserved.</p>
                                                     <div className="flex gap-4">
                                 <a href="www.vibes24_7.com" className="size-9 rounded-full bg-zinc-100 border border-zinc-200 flex items-center justify-center hover:bg-zinc-50 transition-colors">

@@ -25,3 +25,19 @@ body {
 .latest-container::-webkit-scrollbar {
   display: none;
 }
+
+.online-status {
+  animation: online-status-disappear 5s ease forwards;
+}
+
+@keyframes online-status-disappear {
+  0%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
