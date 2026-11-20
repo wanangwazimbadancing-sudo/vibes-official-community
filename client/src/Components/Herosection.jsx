@@ -32,7 +32,7 @@ const Herosection = () => {
                 <article
                     className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0"
                     aria-roledescription="carousel"
-                    aria-label="Vibes Empire features"
+                    aria-label="OnTrib features"
                 >
                     {heroSlides.map(({background, title, description}, index) => (
                         <div

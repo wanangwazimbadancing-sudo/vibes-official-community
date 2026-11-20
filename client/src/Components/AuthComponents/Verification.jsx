@@ -50,7 +50,7 @@ const Verification = () => {
 
 <>
       <div className="w-full flex fixed top-4 left-4">
-        <Link to="/" className="logo text-lg" aria-label="Vibes home">Vibes</Link>
+        <Link to="/" className="logo text-lg" aria-label="OnTrib home">OnTrib</Link>
       </div>
 
 

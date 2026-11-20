@@ -1,6 +1,6 @@
 export const heroSlides = [
     {
-        title: "Vibes Empire:",
+        title: "OnTrib:",
         description: "The social market playground for unlimited leads.",
         background: "#f4f8fb",
     },

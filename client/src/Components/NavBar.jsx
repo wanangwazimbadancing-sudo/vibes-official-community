@@ -17,7 +17,7 @@ const NavBar = () => {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
 
 
-<Link to="/" className="logo flex md:hidden text-black text-lg" aria-label="Vibes home">Vibes</Link> 
+<Link to="/" className="logo flex md:hidden text-black text-lg" aria-label="OnTrib home">OnTrib</Link> 
  
 
 
@@ -25,7 +25,7 @@ const NavBar = () => {
 
 
 <div className="md:flex hidden items-center space-x-4 text-sm text-gray-500  ">
-<Link to="/" className="logo hidden md:flex text-black text-lg" aria-label="Vibes home">Vibes</Link>  
+<Link to="/" className="logo hidden md:flex text-black text-lg" aria-label="OnTrib home">OnTrib</Link>  
            <ChevronRight size={14} className="text-gray-400" />
             <a href="#Apps" className="text-gray-800">Apps</a>
 
