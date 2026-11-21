@@ -4,6 +4,7 @@ import NavBar from "../Components/NavBar"
 import Testimonial from "../Components/LandingPageComponents/Testimonial"
 import CallToAction from "../Components/LandingPageComponents/CallToAction"
 import About from "../Components/LandingPageComponents/About"
+import Features from "../Components/LandingPageComponents/Features"
 
 
 const LandingPage = () => {
@@ -20,6 +21,7 @@ const LandingPage = () => {
             <About />
             <Testimonial />
             <FAQ />
+            <Features />
             <CallToAction />
             
 

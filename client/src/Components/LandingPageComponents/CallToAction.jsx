@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const CallToAction = () => {
 
 return (
-  <div className="max-w-5xl mx-2 md:mx-auto p-px rounded-2xl bg-[#edf6f1]">
+  <div className="max-w-5xl mx-2 md:mx-auto p-px rounded-2xl bg-[#edf6f1] my-12 md:my-16">
             <div className="flex flex-col items-center justify-center text-center py-12 md:py-16 rounded-[15px] bg-gradient-to-r from-[#edf6f1] to-[#f9fffc]">  
                 <div className="flex items-center justify-center bg-white px-3 py-1.5  gap-1 rounded-full text-xs">
                     <Rocket className="w-3 h-3 text-purple-600" />
