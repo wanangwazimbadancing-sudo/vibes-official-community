@@ -1,27 +1,25 @@
+import Business from "./Business.png"
+import OnlineStore from "./OnlineStore.png"
+import Community from "./Community.png"
+
 export const heroSlides = [
     {
         title: "OnTrib:",
         description: "The social market playground for unlimited leads.",
         background: "#f4f8fb",
+        img: Business
     },
     {
         title: "Grow Your Brand:",
         description: "Turn your audience into an active business community.",
         background: "#edf6f1",
+        img: OnlineStore
     },
     {
-        title: "Create With Ease:",
+        title: "Create Your Empire:",
         description: "Use powerful tools to publish, connect and monetise.",
         background: "#f5f1fb",
+        img: Community
     },
-    {
-        title: "Build Your Network:",
-        description: "Discover people, stores and opportunities in one place.",
-        background: "#fff4ed",
-    },
-    {
-        title: "Work Smarter:",
-        description: "Automate your workflow and scale your online business.",
-        background: "#eff4fb",
-    },
+
 ]

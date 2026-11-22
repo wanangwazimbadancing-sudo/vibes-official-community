@@ -1,7 +1,7 @@
-import Herosection from "../Components/Herosection"
-import Latest from "../Components/Latest"
-import NavBar from "../Components/NavBar"
-import Stores from "../Components/Stores"
+import Herosection from "../Components/Pagecomponents/Herosection"
+import Latest from "../Components/Pagecomponents/Latest"
+import NavBar from "../Components/Pagecomponents/NavBar"
+import Stores from "../Components/Pagecomponents/Stores"
 
 const AuthenticatedUser = () => {
   return (

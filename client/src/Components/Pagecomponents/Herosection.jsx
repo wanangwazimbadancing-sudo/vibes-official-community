@@ -1,8 +1,6 @@
-import hero from "../assets/Herosection.png";
 import { Link } from "react-router-dom"
-import { WorkflowIcon} from "lucide-react"
 import { useEffect, useState } from "react"
-import { heroSlides } from "../assets/HeroSectionDummyData";
+import { heroSlides } from "../../assets/HeroSectionDummyData";
 
 const hexToRgba = (hex, alpha) => {
     const value = hex.replace("#", "")
@@ -27,21 +25,21 @@ const Herosection = () => {
     return (
             <section
                 aria-label="main Hero"
-                className="mx-auto grid w-full grid-cols-1 gap-3 lg:h-[min(74vh,720px)] lg:min-h-[450px]"
+                className="mx-auto grid w-full mt-17 grid-cols-1 gap-3 lg:h-[min(74vh,720px)] lg:min-h-[450px]"
             >
                 <article
                     className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0"
                     aria-roledescription="carousel"
                     aria-label="OnTrib features"
                 >
-                    {heroSlides.map(({background, title, description}, index) => (
+                    {heroSlides.map(({background, title, description, img}, index) => (
                         <div
                             key={title}
                             className={`absolute inset-0 transition-opacity duration-700 ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
                             style={{ backgroundColor: background }}
                             aria-hidden={activeSlide !== index}
                         >
-                            <img src={hero} alt="" className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain" />
+                            <img src={img} alt={title} className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain" />
 
                             <div
                                 className="absolute inset-0 z-[5]"
