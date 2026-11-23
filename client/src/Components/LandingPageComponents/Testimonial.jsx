@@ -21,17 +21,14 @@ const Testimonial = () => {
     )
 
     return (
-        <>
+        <div className='w-full flex justify-center'>
 
 
-            <div className="bg-[#fafff5]/40 border-b border-t border-gray-100 flex flex-col items-center justify-center py-16 px-4">
+            <div id="Testimonial" className="bg-[#fafff5]/40 md:w-[70vw] lg:w-[70vw] border-b border-t border-gray-100 flex flex-col items-center justify-center py-16 px-4">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-medium text-black mb-4">
                         Loved by creators and growing brands
                     </h1>
-                    <p className="text-sm text-gray-800/50 max-w-md mx-auto">
-                        Discover how creators and businesses use OnTrib for multi-streaming, online communities and business automation.
-                    </p>
                 </div>
 
                 <div className="relative w-full max-w-6xl overflow-hidden">
@@ -49,7 +46,7 @@ const Testimonial = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

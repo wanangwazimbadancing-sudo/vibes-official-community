@@ -13,8 +13,12 @@
   font-style: normal;
 }
 
-body {
-  min-height: 100vh;
+body 
+{
+min-height: 100vh;
+position: relative;
+display: flex;
+justify-content: center;
 }
 
 .latest-container {

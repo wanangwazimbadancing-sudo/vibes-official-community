@@ -6,7 +6,7 @@ const Login = () => {
 <div className="flex flex-col items-center justify-center min-h-screen">
 <div className="w-full flex fixed top-4 left-4"> <Link to="/" className="logo text-lg " aria-label="OnTrib home">OnTrib</Link></div>
     <legend className="text-2xl font-bold mb-6">Login</legend>
-            <form className="bg-white text-gray-500 max-w-[340px] mx-4 p-6 text-left text-sm ">
+            <form className=" text-gray-500 max-w-[340px] mx-4 p-6 text-left text-sm ">
 
               <fieldset>
                <label className="font-medium" htmlFor="username">UserName*:</label>

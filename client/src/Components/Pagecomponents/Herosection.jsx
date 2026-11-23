@@ -25,24 +25,23 @@ const Herosection = () => {
     return (
             <section
                 aria-label="main Hero"
-                className="mx-auto grid w-full mt-17 grid-cols-1 gap-3 lg:h-[min(74vh,720px)] lg:min-h-[450px]"
+                className="mx-auto grid md:w-[70vw] lg:w-[70vw] mt-5 grid-cols-1 gap-3 lg:h-[min(54vh,520px)] lg:min-h-[350px] "
             >
                 <article
                     className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0"
                     aria-roledescription="carousel"
                     aria-label="OnTrib features"
                 >
-                    {heroSlides.map(({background, title, description, img}, index) => (
+                    {heroSlides.map(({background, title, description}, index) => (
                         <div
                             key={title}
                             className={`absolute inset-0 transition-opacity duration-700 ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
                             style={{ backgroundColor: background }}
                             aria-hidden={activeSlide !== index}
                         >
-                            <img src={img} alt={title} className="absolute inset-0 hidden h-full w-full object-cover object-right-bottom lg:block lg:object-contain" />
 
                             <div
-                                className="absolute inset-0 z-[5]"
+                                className="absolute inset-0 z-[5] rounded-xl"
                                 aria-hidden="true"
                                 style={{
                                     backgroundImage: `linear-gradient(to right, ${background} 0%, ${background} 22%, ${hexToRgba(background, 0.96)} 38%, ${hexToRgba(background, 0.72)} 52%, ${hexToRgba(background, 0.18)} 72%, ${hexToRgba(background, 0)} 100%)`,
@@ -50,7 +49,7 @@ const Herosection = () => {
                             />
 
                             <div
-                                className="relative z-10 flex h-full w-full max-w-[470px] flex-col justify-center px-6 py-10 sm:px-10 lg:px-[8%]"
+                                className="relative z-10 flex h-full w-full max-w-[670px] flex-col justify-center px-6 py-10 sm:px-10 lg:px-[8%]"
                             >
                                 <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
                                     {title}
@@ -60,7 +59,7 @@ const Herosection = () => {
                                 </p>
                                 <Link
                                     to="/join"
-                                    className="mt-7 inline-flex min-h-11 min-w-30 items-center justify-center bg-white/30 backdrop-blur-[12px] px-2 text-base font-medium text-black shadow-md"
+                                    className="mt-7 inline-flex min-h-11 max-w-30 items-center justify-center bg-white/30 backdrop-blur-[12px] px-2 text-base font-medium text-black shadow-md"
                                 >
                                     Join Now
                                 </Link>

@@ -1,96 +1,103 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import {AlignRight,ChevronRight,LogIn,Moon,  Sun, X} from "lucide-react"
+import { AlignRight, ChevronRight, LogIn, X } from "lucide-react"
 
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const toggleDarkMode = () =>setIsDarkMode(!isDarkMode);
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    const closeOnDesktop = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    window.addEventListener("resize", closeOnDesktop);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", closeOnEscape);
+      window.removeEventListener("resize", closeOnDesktop);
+    };
+  }, [open]);
 
   return (
-<>
+    <>
+      <header className="fixed inset-x-0 top-0 z-[100] flex h-16 items-center justify-between border-b border-zinc-200/80 bg-white/95 px-4 backdrop-blur-md md:hidden">
+        <Link to="/" className="logo text-xl text-black" aria-label="OnTrib home">
+          OnTrib
+        </Link>
+        <button
+          type="button"
+          onClick={() => setOpen((current) => !current)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
+          className="rounded-lg p-2 text-black transition-colors hover:bg-zinc-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          {open ? <X size={24} /> : <AlignRight size={24} />}
+        </button>
+      </header>
 
-    <nav className="fixed  bg-white/20 backdrop-blur-[12px]  top-0 z-50 w-full border-b border-gray-200  px-4 py-4   sm:px-6 md:px-16 lg:px-24 xl:px-32">
-      
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+      {/* desktop navigation */}
+      <div className="fixed top-60 -left-50 z-[111] hidden w-full max-w-[500px] max-h-[100px] rotate-90 md:flex">
+        <Link to="/" className="logo flex text-lg text-black -rotate-90" aria-label="OnTrib home">OnTrib</Link>
 
+        <div className="flex items-center space-x-4 text-sm text-gray-500">
+          <a href="#About" className="text-gray-800">About</a>
+          <ChevronRight size={14} className="text-gray-400" />
+          <a href="#Testimonial" className="text-gray-800">Testimonial</a>
+          <ChevronRight size={14} className="text-gray-400" />
+          <a href="#FAQ" className="text-gray-800">FAQ</a>
+          <ChevronRight size={14} className="text-gray-400" />
+          <a href="#Contact" className="text-gray-800">Contact</a>
+        </div>
+      </div>
 
-<Link to="/" className="logo flex md:hidden text-black text-lg" aria-label="OnTrib home">OnTrib</Link> 
- 
-
-
-{/*--------- navigator bar -----------------*/}
-
-
-<div className="md:flex hidden items-center space-x-4 text-sm text-gray-500  ">
-<Link to="/" className="logo hidden md:flex text-black text-lg" aria-label="OnTrib home">OnTrib</Link>  
-           <ChevronRight size={14} className="text-gray-400" />
-            <a href="#Apps" className="text-gray-800">Apps</a>
-
-            <ChevronRight size={14} className="text-gray-400" />
-             <a href="#Trends" className="text-gray-800">Trends</a>
-
-              <ChevronRight size={14} className="text-gray-400" />
-             <a href="#Store" className="text-gray-800 ">Stores</a>
-             <ChevronRight size={14} className="text-gray-400" />
-            <a href="#Contact" className="text-gray-800 ">contact</a>
-            
-  </div>
-
-
-
-
-
-
-{/*--------------------- auth buttons ------------- */}
-
-<span className="flex gap-2">
- <Link to="login"  className="md:flex hidden text-gray-500 active:scale-95 transition text-sm flex items-center px-4 py-2 gap-2 rounded w-max border border-gray-400/30">
-                <LogIn size={14} />
-                 login
-            </Link>
- <Link  to="/join"  className="md:flex hidden min-h-8 min-w-20 items-center justify-center bg-black px-1  text-sm text-white rounded-md"> sign Up </Link>
-
-</span>
-
-
-{/*--------------------- theme icons --------------- */}
-
-<span className="md:hidden">
-          <button onClick={()=> setIsDarkMode(!isDarkMode )}  type="button"  className="rounded  p-2 text-black hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden" >  {isDarkMode ? <Sun size={24} /> : <Moon size={24}/>}   </button>
-          <button type="button" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" className="rounded p-2 text-black hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"> {open ? <X size={24} /> : <AlignRight size={24}/>}  </button>
-     
-</span>
- </div>
-
-
- {/*------------------- drop down menu--------------- */}
+      <span className="fixed bg-white w-[150px] top-3 right-4 z-[111] hidden gap-2 md:flex rounded-md">
+        <Link to="/login" className="flex min-h-8 min-w-15 items-center justify-center rounded-md border border-gray-400/30 px-2 py-2 text-sm text-gray-500 transition active:scale-95">
+          login
+        </Link>
+        <Link to="/join" className="flex min-h-8 min-w-15 items-center justify-center rounded-md bg-black px-1 text-center text-sm text-white">signUp</Link>
+      </span>
 
       <div
         id="mobile-navigation"
         aria-hidden={!open}
         inert={!open}
-        className={`absolute inset-x-0 top-full h-[calc(100dvh-73px)] bg-black/20 transition-colors duration-300 md:hidden ${open ? "pointer-events-auto" : "pointer-events-none bg-transparent"}`}
+        className={`fixed inset-x-0 bottom-0 top-16 z-[90] md:hidden ${open ? "pointer-events-auto" : "pointer-events-none"}`}
       >
-        <div
-          className={`flex h-full w-full flex-col overflow-y-auto overscroll-contain bg-white px-5 py-6 text-sm text-black shadow-xl transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
+        <button
+          type="button"
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+          className={`absolute inset-0 bg-black/30 transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}
+        />
+        <nav
+          aria-label="Mobile navigation"
+          className={`absolute right-0 top-0 flex h-full w-[min(88vw,360px)] flex-col overflow-y-auto overscroll-contain bg-white px-5 py-6 text-black shadow-2xl transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
         >
-          <nav aria-label="Mobile navigation" className="flex flex-col gap-1">
-            <a href="#Apps" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
-              Apps <ChevronRight size={18} aria-hidden="true" />
+          <div className="flex flex-col gap-1">
+            <a href="#About" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              About <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#Latest" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
-              Latest <ChevronRight size={18} aria-hidden="true" />
+            <a href="#Testimonial" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              Testimonial <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#Store" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
-              Stores <ChevronRight size={18} aria-hidden="true" />
+            <a href="#FAQ" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+              FAQ <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#contact" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+            <a href="#Contact" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
               Contact <ChevronRight size={18} aria-hidden="true" />
             </a>
-          </nav>
+          </div>
           <div className="mt-6 grid grid-cols-2 gap-3 border-t border-zinc-100 pt-6">
             <Link to="/login" onClick={() => setOpen(false)} className="flex min-h-12 items-center justify-center rounded-lg border border-zinc-300 px-4 text-base font-medium text-zinc-900 transition-colors hover:bg-zinc-50">
               Log in
@@ -99,13 +106,9 @@ const NavBar = () => {
               Get started
             </Link>
           </div>
-        </div>
+        </nav>
       </div>
-    </nav>
-
-
-
-</>
+    </>
   )
 }
 

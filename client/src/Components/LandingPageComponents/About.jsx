@@ -1,13 +1,12 @@
-import React from 'react'
 import img from "../../assets/About.jpg"
 const About = () => {
 return (
-        <>
+        <div className='w-full flex justify-center'>
 
-            <section className="flex flex-col md:flex-row items-center justify-center gap-10 max-md:px-4 my-10">
+            <section id="About" className="flex flex-col md:w-[70vw] lg:w-[70vw] md:flex-row items-center justify-center gap-10 max-md:px-4 my-10">
                 <div className="relative  overflow-hidden shrink-0">
-                    <img className=" w-full max-w-md max-h-[470px] object-cover rounded-md" src={img} alt="About Us" />
-                    <div className="flex items-center gap-1 max-w-72 absolute bottom-8 left-8 bg-black/10 backdrop-blur-[10px] border border-gray-600 p-4 rounded-xl shadow-sm">
+                    <img className=" w-full max-w-md max-h-[350px] object-cover rounded-md" src={img} alt="About Us" />
+                    <div className="flex items-center gap-1 max-w-52 absolute bottom-8 left-8 bg-black/10 backdrop-blur-[10px] border border-gray-600 p-4 rounded-xl shadow-sm">
                         <div className="flex  -space-x-4 shrink-0">
                            <div className="flex flex-wrap justify-center -space-x-3">
                             <div className="flex items-center justify-center text-xs   size-9 rounded-full border-[3px] border-white bg-[#f0eef7] z-[4]"><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.937 10.486a19.8 19.8 0 0 1 0-8.276 1.65 1.65 0 0 1 1.166-1.158c4.47-.736 9.03-.736 13.5 0A1.67 1.67 0 0 1 16.77 2.21a19.8 19.8 0 0 1 0 8.276 1.65 1.65 0 0 1-1.167 1.159c-4.47.735-9.03.735-13.5 0a1.67 1.67 0 0 1-1.166-1.159" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" /><path d="m7.187 9.466 4.166-2.483L7.187 4.5z" stroke="#000000" strokeLinecap="round" strokeLinejoin="round" /></svg> </div>
@@ -27,7 +26,7 @@ return (
 
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

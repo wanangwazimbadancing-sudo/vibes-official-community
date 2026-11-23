@@ -4,7 +4,7 @@ const Footer = () => {
         <>
 
 
-            <footer className=" pt-15 px-4 sm:px-6 md:px-8 lg:px-20">
+            <footer id="Contact" className=" px-4 sm:px-6 md:px-8 lg:px-20">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-gray-200 pb-4">
                         <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} OnTrib. All Rights Reserved.</p>
                         <a href="termspolicy" target="_blank" className="text-sm text-zinc-500 cursor-pointer">Terms & Policy</a>

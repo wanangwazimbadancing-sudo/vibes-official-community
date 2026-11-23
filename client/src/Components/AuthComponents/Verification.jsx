@@ -62,7 +62,7 @@ const Verification = () => {
 
           
       <form
-        className="bg-white h-[fit-content] text-gray-500 max-w-96 mx-4 md:py-10 md:px-6 px-4 py-8 text-left text-sm"
+        className=" h-[fit-content] text-gray-500 max-w-96 mx-4 md:py-10 md:px-6 px-4 py-8 text-left text-sm"
         onSubmit={handleSubmit}
       >
         <fieldset>
