@@ -18,12 +18,12 @@ const MobileNav = () => {
             to={to}
             aria-current={active ? "page" : undefined}
             className={`flex min-w-0 flex-col items-center gap-1.5 text-[12px] leading-none transition-colors ${
-              active ? "font-medium text-blue-600" : "text-zinc-950"
+              active ? "font-medium " : "text-zinc-950"
             }`}
           >
             <span
               className={`grid size-10 place-items-center rounded-xl ${
-                active ? "bg-blue-100" : ""
+                active ? "bg-gray-100" : ""
               }`}
             >
               <Icon
