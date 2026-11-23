@@ -10,8 +10,8 @@ const [openIndex, setOpenIndex] = useState(-1);
     };
 
     return (
-        <>
-   <div id="FAQ" className=" flex items-center justify-center py-12 px-4">
+         <div className='w-full flex justify-center'>
+   <div id="FAQ" className=" flex items-center justify-center md:w-[70vw] lg:w-[70vw] py-12 px-4">
                 <div className="w-full max-w-3xl">
                     <div className="text-center mb-12">
                         <p className="text-sm font-medium tracking-wider text-slate-900 mb-2">FAQ'S</p>
@@ -54,7 +54,7 @@ const [openIndex, setOpenIndex] = useState(-1);
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

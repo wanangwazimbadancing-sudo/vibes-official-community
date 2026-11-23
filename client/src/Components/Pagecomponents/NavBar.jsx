@@ -5,6 +5,46 @@ import { AlignRight, ChevronRight, LogIn, X } from "lucide-react"
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sectionIds = ["About", "Testimonial", "FAQ", "Contact", "Latest", "Store"];
+
+    const updateActiveSection = () => {
+      const offset = window.innerHeight * 0.25;
+      let currentSection = "";
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      sectionIds.forEach((id) => {
+        const section = document.getElementById(id);
+        if (!section) return;
+
+        const distance = Math.abs(section.getBoundingClientRect().top - offset);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          currentSection = id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    let frameId;
+    const handleScroll = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -51,13 +91,13 @@ const NavBar = () => {
         <Link to="/" className="logo flex text-lg text-black -rotate-90" aria-label="OnTrib home">OnTrib</Link>
 
         <div className="flex items-center space-x-4 text-sm text-gray-500">
-          <a href="#About" className="text-gray-800">About</a>
+          <a href="#About" onClick={() => setActiveSection("About")} className={activeSection === "About" ? "font-bold text-black" : "text-gray-800"}>About</a>
           <ChevronRight size={14} className="text-gray-400" />
-          <a href="#Testimonial" className="text-gray-800">Testimonial</a>
+          <a href="#Testimonial" onClick={() => setActiveSection("Testimonial")} className={activeSection === "Testimonial" ? "font-bold text-black" : "text-gray-800"}>Testimonial</a>
           <ChevronRight size={14} className="text-gray-400" />
-          <a href="#FAQ" className="text-gray-800">FAQ</a>
+          <a href="#FAQ" onClick={() => setActiveSection("FAQ")} className={activeSection === "FAQ" ? "font-bold text-black" : "text-gray-800"}>FAQ</a>
           <ChevronRight size={14} className="text-gray-400" />
-          <a href="#Contact" className="text-gray-800">Contact</a>
+          <a href="#Contact" onClick={() => setActiveSection("Contact")} className={activeSection === "Contact" ? "font-bold text-black" : "text-gray-800"}>Contact</a>
         </div>
       </div>
 
@@ -85,16 +125,16 @@ const NavBar = () => {
           className={`absolute right-0 top-0 flex h-full w-[min(88vw,360px)] flex-col overflow-y-auto overscroll-contain bg-white px-5 py-6 text-black shadow-2xl transition-transform duration-300 ease-out ${open ? "translate-x-0" : "translate-x-full"}`}
         >
           <div className="flex flex-col gap-1">
-            <a href="#About" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+            <a href="#About" onClick={() => { setActiveSection("About"); setOpen(false); }} className={`flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50 ${activeSection === "About" ? "font-bold" : ""}`}>
               About <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#Testimonial" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+            <a href="#Testimonial" onClick={() => { setActiveSection("Testimonial"); setOpen(false); }} className={`flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50 ${activeSection === "Testimonial" ? "font-bold" : ""}`}>
               Testimonial <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#FAQ" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+            <a href="#FAQ" onClick={() => { setActiveSection("FAQ"); setOpen(false); }} className={`flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50 ${activeSection === "FAQ" ? "font-bold" : ""}`}>
               FAQ <ChevronRight size={18} aria-hidden="true" />
             </a>
-            <a href="#Contact" onClick={() => setOpen(false)} className="flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50">
+            <a href="#Contact" onClick={() => { setActiveSection("Contact"); setOpen(false); }} className={`flex items-center justify-between rounded-lg px-3 py-3 text-base hover:bg-zinc-50 ${activeSection === "Contact" ? "font-bold" : ""}`}>
               Contact <ChevronRight size={18} aria-hidden="true" />
             </a>
           </div>
