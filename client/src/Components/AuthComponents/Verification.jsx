@@ -89,7 +89,7 @@ const Verification = () => {
               />
             ))}
           </div>
- {code.every(Boolean) ?( <button type="submit" className="w-full my-1 bg-black py-2.5 rounded text-white active:scale-95 transition disabled:cursor-not-allowed disabled:opacity-50" >Verify</button>):(<p className="cursor-pointer">resend</p>)}
+ {code.every(Boolean) ?( <Link to="/auth" type="submit" className="w-full my-1 bg-black py-2.5 rounded text-white active:scale-95 transition disabled:cursor-not-allowed disabled:opacity-50" >Verify</Link>):(<p className="cursor-pointer">resend</p>)}
         </fieldset>
       </form>
 </div>
