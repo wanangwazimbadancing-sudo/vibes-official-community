@@ -24,6 +24,8 @@ const LandingPage = () => {
             <Features />
             <CallToAction />
             
+            <Footer />
+            
 
 </>
   )

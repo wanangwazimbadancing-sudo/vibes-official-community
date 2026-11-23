@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import SideBar from "../Components/NavBars/SideBar"
+import MobileNav from "../Components/NavBars/MobileNav"
 import Herosection from "../Components/Pagecomponents/Herosection"
 import Latest from "../Components/Pagecomponents/Latest"
 import Stores from "../Components/Pagecomponents/Stores"
@@ -18,16 +19,19 @@ const AuthenticatedUser = () => {
   }, [])
 
   return (
-    <div className="flex min-h-screen w-full bg-zinc-50">
-      <SideBar
-        expanded={sidebarExpanded}
-        onExpandedChange={setSidebarExpanded}
-      />
-      <main className="relative z-10 min-w-0 flex-1">
+    <div className="flex min-h-screen w-full">
+      <div className="hidden md:block">
+        <SideBar
+          expanded={sidebarExpanded}
+          onExpandedChange={setSidebarExpanded}
+        />
+      </div>
+      <main className="relative z-10 min-w-0 flex-1 pb-[82px] md:pb-0">
         <Herosection />
         <Latest />
         <Stores />
       </main>
+      <MobileNav />
     </div>
   )
 }

@@ -28,3 +28,13 @@ export const navigationItems = [
   { label: "Stream", icon: Radio, to: "/stream" },
   { label: "Automation", icon: Workflow, to: "/automation" },
 ]
+
+
+
+export const mobileNavigationItems = [
+  { label: "Home", icon: HomeIcon, to: "/auth" },
+  { label: "Store", icon: ShoppingBag, to: "/store" },
+  { label: "Community", icon: Users, to: "/community" },
+  { label: "Stream", icon: Radio, to: "/stream" },
+  { label: "Automation", icon: Workflow, to: "/automation" },
+]

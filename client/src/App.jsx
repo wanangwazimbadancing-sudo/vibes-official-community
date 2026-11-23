@@ -11,7 +11,6 @@ import PagenotFound from "./Components/AlertComponents/PagenotFound"
 
 import LandingPage from "./pages/LandingPage"
 import AuthenticatedUser from "./pages/AuthenticatedUser"
-import Footer from "./Components/Pagecomponents/Footer"
 import { useEffect, useState } from "react"
 import NetworkError from "./Components/AlertComponents/NetworkError"
 
@@ -86,7 +85,6 @@ const App = () => {
 {!isOnline && (<NetworkError />)}
 
 
-<Footer />
     </div>
 
 
