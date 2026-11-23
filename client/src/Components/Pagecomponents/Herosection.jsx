@@ -25,7 +25,7 @@ const Herosection = () => {
     return (
             <section
                 aria-label="main Hero"
-                className="mx-auto grid md:w-[70vw] lg:w-[70vw] mt-5 grid-cols-1 gap-3 lg:h-[min(54vh,520px)] lg:min-h-[350px] "
+                className="mx-auto mt-5 grid w-[calc(100%-32px)] max-w-[1100px] grid-cols-1 gap-3 lg:h-[min(54vh,520px)] lg:min-h-[350px]"
             >
                 <article
                     className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0"

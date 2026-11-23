@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { AlignRight, ChevronRight, LogIn, X } from "lucide-react"
+import { AlignRight, ChevronRight,  X } from "lucide-react"
 
 
 const NavBar = () => {

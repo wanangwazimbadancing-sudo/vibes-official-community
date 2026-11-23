@@ -1,6 +1,6 @@
 import FAQ from "../Components/LandingPageComponents/FAQ"
 import Herosection from "../Components/Pagecomponents/Herosection"
-import NavBar from "../Components/Pagecomponents/NavBar"
+import NavBar from "../Components/NavBars/NavBar"
 import Testimonial from "../Components/LandingPageComponents/Testimonial"
 import CallToAction from "../Components/LandingPageComponents/CallToAction"
 import About from "../Components/LandingPageComponents/About"
