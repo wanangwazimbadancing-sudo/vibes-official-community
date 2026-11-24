@@ -87,26 +87,32 @@ const NavBar = () => {
       </header>
 
       {/* desktop navigation */}
-      <div className="fixed top-60 -left-50 z-[111] hidden w-full max-w-[500px] max-h-[100px] rotate-90 md:flex">
-        <Link to="/" className="logo flex text-lg text-black -rotate-90" aria-label="OnTrib home">OnTrib</Link>
+      <header className="fixed inset-x-0 top-0 z-[111] hidden h-16 items-center border-b border-zinc-200/80 bg-white/95 backdrop-blur-md md:flex">
+        <div className="mx-auto flex h-full w-full max-w-7xl items-center px-6 lg:px-10">
+          <Link to="/" className="logo flex shrink-0 text-lg text-black" aria-label="OnTrib home">
+            OnTrib
+          </Link>
 
-        <div className="flex items-center space-x-4 text-sm text-gray-500">
-          <a href="#About" onClick={() => setActiveSection("About")} className={activeSection === "About" ? "font-bold text-black" : "text-gray-800"}>About</a>
-          <ChevronRight size={14} className="text-gray-400" />
-          <a href="#Testimonial" onClick={() => setActiveSection("Testimonial")} className={activeSection === "Testimonial" ? "font-bold text-black" : "text-gray-800"}>Testimonial</a>
-          <ChevronRight size={14} className="text-gray-400" />
-          <a href="#FAQ" onClick={() => setActiveSection("FAQ")} className={activeSection === "FAQ" ? "font-bold text-black" : "text-gray-800"}>FAQ</a>
-          <ChevronRight size={14} className="text-gray-400" />
-          <a href="#Contact" onClick={() => setActiveSection("Contact")} className={activeSection === "Contact" ? "font-bold text-black" : "text-gray-800"}>Contact</a>
+          <nav aria-label="Desktop navigation" className="flex items-center gap-1 rounded-full border border-zinc-200/80 bg-zinc-50/80 p-1 mx-auto">
+            <a href="#About" onClick={() => setActiveSection("About")} className={`rounded-full px-4 py-2 text-sm transition-colors ${activeSection === "About" ? "bg-white font-semibold text-black shadow-sm" : "text-zinc-600 hover:text-black"}`}>About</a>
+
+            <a href="#Testimonial" onClick={() => setActiveSection("Testimonial")} className={`rounded-full px-4 py-2 text-sm transition-colors ${activeSection === "Testimonial" ? "bg-white font-semibold text-black shadow-sm" : "text-zinc-600 hover:text-black"}`}>Testimonial</a>
+
+            <a href="#FAQ" onClick={() => setActiveSection("FAQ")} className={`rounded-full px-4 py-2 text-sm transition-colors ${activeSection === "FAQ" ? "bg-white font-semibold text-black shadow-sm" : "text-zinc-600 hover:text-black"}`}>FAQ</a>
+
+            <a href="#Contact" onClick={() => setActiveSection("Contact")} className={`rounded-full px-4 py-2 text-sm transition-colors ${activeSection === "Contact" ? "bg-white font-semibold text-black shadow-sm" : "text-zinc-600 hover:text-black"}`}>Contact</a>
+          </nav>
+
+          <div className="flex shrink-0 items-center gap-2">
+            <Link to="/login" className="flex h-9 min-w-16 items-center justify-center rounded-md border border-zinc-300 px-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-50 active:scale-95">
+              Log in
+            </Link>
+            <Link to="/join" className="flex h-9 min-w-20 items-center justify-center rounded-md bg-black px-3 text-sm font-medium text-white transition hover:bg-zinc-800 active:scale-95">
+              Sign up
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <span className="fixed bg-white w-[150px] top-3 right-4 z-[111] hidden gap-2 md:flex rounded-md">
-        <Link to="/login" className="flex min-h-8 min-w-15 items-center justify-center rounded-md border border-gray-400/30 px-2 py-2 text-sm text-gray-500 transition active:scale-95">
-          login
-        </Link>
-        <Link to="/join" className="flex min-h-8 min-w-15 items-center justify-center rounded-md bg-black px-1 text-center text-sm text-white">signUp</Link>
-      </span>
+      </header>
 
       <div
         id="mobile-navigation"
