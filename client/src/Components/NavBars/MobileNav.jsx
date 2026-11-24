@@ -18,7 +18,7 @@ const MobileNav = () => {
             to={to}
             aria-current={active ? "page" : undefined}
             className={`flex min-w-0 flex-col items-center gap-1.5 text-[12px] leading-none transition-colors ${
-              active ? "font-medium " : "text-zinc-950"
+              active ? "font-sm " : "text-gray-400"
             }`}
           >
             <span
@@ -28,7 +28,7 @@ const MobileNav = () => {
             >
               <Icon
                 size={25}
-                strokeWidth={active ? 2.3 : 1.8}
+                strokeWidth={active ? 2.3 : 1.4}
                 aria-hidden="true"
               />
             </span>

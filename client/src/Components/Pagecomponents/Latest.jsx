@@ -20,7 +20,7 @@ const Latest = () => {
   return (
 <>
 <div id='Latest' className="flex items-center justify-between mt-10 ml-4 mr-4 mx-auto">
-    <p className='font-semibold'>Latest</p>
+    <p className='font-sm'>Latest</p>
 
     <span className='flex gap-2'>
       <button

@@ -20,8 +20,8 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
 
   return (
     <aside
-      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-200/80 bg-white px-3 py-5 text-zinc-900 transition-[width] duration-300 ${
-        isExpanded ? "w-[260px]" : "w-[76px]"
+      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-100/80 bg-white px-3 py-5 text-zinc-900 transition-[width] duration-300 ${
+        isExpanded ? "w-[260px]" : "w-[60px]"
       }`}
       aria-label="Primary navigation"
     >
@@ -60,7 +60,7 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
                   : "text-zinc-500 hover:bg-zinc-50 hover:text-zinc-950"
               }`}
             >
-              <Icon size={21} strokeWidth={active ? 2.2 : 1.8} aria-hidden="true" />
+              <Icon size={21} strokeWidth={active ? 2 : 1.5} aria-hidden="true" />
               {isExpanded && <span className="text-[15px]">{label}</span>}
             </Link>
           )

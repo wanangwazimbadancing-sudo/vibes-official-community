@@ -20,7 +20,7 @@ const Stores = () => {
   return (
 <>
 <div id='Store' className="flex items-center justify-between mt-10 ml-4 mr-4 mx-auto">
-    <p className='font-semibold'>Stores</p>
+    <p className='font-sm'>Stores</p>
 
     <span className='flex gap-2'>
       <button
