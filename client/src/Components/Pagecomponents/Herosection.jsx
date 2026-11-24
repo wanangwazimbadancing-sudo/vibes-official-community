@@ -28,20 +28,20 @@ const Herosection = () => {
                 className="mx-auto mt-5 grid w-[calc(100%-32px)] max-w-[1100px] grid-cols-1 gap-3 lg:h-[min(54vh,520px)] lg:min-h-[350px]"
             >
                 <article
-                    className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0"
+                    className="relative flex h-[300px] items-center overflow-hidden  sm:h-[420px] lg:h-full lg:min-h-0 rounded-xl "
                     aria-roledescription="carousel"
                     aria-label="OnTrib features"
                 >
                     {heroSlides.map(({background, title, description}, index) => (
                         <div
                             key={title}
-                            className={`absolute inset-0 transition-opacity duration-700 ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
+                            className={`absolute inset-0 transition-opacity duration-700  ${activeSlide === index ? "opacity-100" : "pointer-events-none opacity-0"}`}
                             style={{ backgroundColor: background }}
                             aria-hidden={activeSlide !== index}
                         >
 
                             <div
-                                className="absolute inset-0 z-[5] rounded-xl"
+                                className="absolute inset-0 z-[5] "
                                 aria-hidden="true"
                                 style={{
                                     backgroundImage: `linear-gradient(to right, ${background} 0%, ${background} 22%, ${hexToRgba(background, 0.96)} 38%, ${hexToRgba(background, 0.72)} 52%, ${hexToRgba(background, 0.18)} 72%, ${hexToRgba(background, 0)} 100%)`,
