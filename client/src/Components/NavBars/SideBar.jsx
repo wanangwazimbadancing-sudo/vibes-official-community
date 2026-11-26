@@ -20,8 +20,8 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
 
   return (
     <aside
-      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-100/80 bg-white px-3 py-5 text-zinc-900 transition-[width] duration-300 ${
-        isExpanded ? "w-[260px]" : "w-[60px]"
+      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-100/80 bg-white px-3 pt-5 text-zinc-900 transition-[width] duration-300 ${
+        isExpanded ? "w-[260px]" : "w-[70px]"
       }`}
       aria-label="Primary navigation"
     >
@@ -36,9 +36,9 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
           onClick={toggleSidebar}
           aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}
           aria-expanded={isExpanded}
-          className="grid size-9 place-items-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950"
+          className="grid size-9 place-items-center rounded-lg text-zinc-800 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950"
         >
-          <PanelLeft size={21} strokeWidth={1.8} />
+          <PanelLeft size={21} strokeWidth={1.8} className=" absolute" />
         </button>
       </div>
 
@@ -57,10 +57,10 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
               } ${
                 active
                   ? "bg-zinc-100 font-semibold text-zinc-950"
-                  : "text-zinc-500 hover:bg-zinc-50 hover:text-zinc-950"
+                  : "text-zinc-900 hover:bg-zinc-50 hover:text-zinc-950"
               }`}
             >
-              <Icon size={21} strokeWidth={active ? 2 : 1.5} aria-hidden="true" />
+              <Icon size={21} strokeWidth={active ? 2.5 : 1.8} aria-hidden="true" />
               {isExpanded && <span className="text-[15px]">{label}</span>}
             </Link>
           )

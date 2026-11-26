@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { storeData } from '../../assets/StoreDummyData'
 
 const Stores = () => {
   const carouselRef = useRef(null)
@@ -19,8 +20,8 @@ const Stores = () => {
 
   return (
 <>
-<div id='Store' className="flex items-center justify-between mt-10 ml-4 mr-4 mx-auto">
-    <p className='font-sm'>Stores</p>
+<div id='Store' className="flex items-center justify-between my-10 ml-4 mr-4 mx-auto">
+    <p className='font-semibold'>Stores</p>
 
     <span className='flex gap-2'>
       <button
@@ -46,14 +47,15 @@ const Stores = () => {
    ref={carouselRef}
    className="latest-container flex flex-nowrap items-center mt-10 ml-4 mr-4 mx-auto gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory"
  >
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
-                <div className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"/>
+                {storeData.map((store) => (
+                  <img
+                    key={store.id}
+                    src={store.img}
+                    alt={store.name}
+                    className="w-56 h-80 shrink-0 snap-start bg-gray-200 rounded-[10px]"
+                  />
+                ))}
+
             </div>
 
 </>

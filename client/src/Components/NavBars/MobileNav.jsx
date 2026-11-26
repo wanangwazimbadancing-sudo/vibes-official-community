@@ -18,7 +18,7 @@ const MobileNav = () => {
             to={to}
             aria-current={active ? "page" : undefined}
             className={`flex min-w-0 flex-col items-center gap-1.5 text-[12px] leading-none transition-colors ${
-              active ? "font-sm " : "text-gray-400"
+              active ? "font-sm " : "text-gray-900"
             }`}
           >
             <span

@@ -1,5 +1,5 @@
 import { createElement } from "react"
-import { ShoppingBag, Users, Radio, Workflow } from "lucide-react"
+import { ShoppingBag, Radio, Workflow, UserCircle,ScissorsLineDashedIcon } from "lucide-react"
 
 export const HomeIcon = () =>
   createElement(
@@ -23,9 +23,9 @@ export const HomeIcon = () =>
 
 export const navigationItems = [
   { label: "Home", icon: HomeIcon, to: "/auth" },
-  { label: "Store", icon: ShoppingBag, to: "/store" },
-  { label: "Community", icon: Users, to: "/community" },
+  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/clipping" },
   { label: "Stream", icon: Radio, to: "/stream" },
+  { label: "Store", icon: ShoppingBag, to: "/store" },
   { label: "Automation", icon: Workflow, to: "/automation" },
 ]
 
@@ -34,7 +34,7 @@ export const navigationItems = [
 export const mobileNavigationItems = [
   { label: "Home", icon: HomeIcon, to: "/auth" },
   { label: "Store", icon: ShoppingBag, to: "/store" },
-  { label: "Community", icon: Users, to: "/community" },
+  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/clipping" },
   { label: "Stream", icon: Radio, to: "/stream" },
-  { label: "Automation", icon: Workflow, to: "/automation" },
+  { label: "Profile", icon: UserCircle, to: "/profile" },
 ]

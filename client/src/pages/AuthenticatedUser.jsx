@@ -21,7 +21,7 @@ const AuthenticatedUser = () => {
 
   return (
     <div className="flex min-h-screen w-full">
-      <div className="hidden md:block">
+      <div className="hidden shrink-0 md:block">
         <SideBar
           expanded={sidebarExpanded}
           onExpandedChange={setSidebarExpanded}
@@ -30,8 +30,8 @@ const AuthenticatedUser = () => {
       <main className="relative z-10 min-w-0 flex-1 pb-[82px] md:pb-0">
         <AuthNavTop />
         <Herosection />
-        <Latest />
         <Stores />
+        <Latest />
       </main>
       <MobileNav />
     </div>
