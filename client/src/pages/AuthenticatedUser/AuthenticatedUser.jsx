@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react"
-import SideBar from "../Components/NavBars/SideBar"
-import MobileNav from "../Components/NavBars/MobileNav"
-import Herosection from "../Components/Pagecomponents/Herosection"
-import Latest from "../Components/Pagecomponents/Latest"
-import Stores from "../Components/Pagecomponents/Stores"
-import AuthNavTop from "../Components/NavBars/AuthNavTop"
+import { Outlet } from "react-router-dom"
+import SideBar from "../.././Components/NavBars/SideBar"
+import MobileNav from "../.././Components/NavBars/MobileNav"
+import AuthNavTop from "../.././Components/NavBars/AuthNavTop"
 
 const AuthenticatedUser = () => {
   const [sidebarExpanded, setSidebarExpanded] = useState(true)
@@ -29,9 +27,7 @@ const AuthenticatedUser = () => {
       </div>
       <main className="relative z-10 min-w-0 flex-1 pb-[82px] md:pb-0">
         <AuthNavTop />
-        <Herosection />
-        <Stores />
-        <Latest />
+        <Outlet />
       </main>
       <MobileNav />
     </div>

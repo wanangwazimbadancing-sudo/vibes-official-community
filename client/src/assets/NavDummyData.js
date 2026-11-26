@@ -23,18 +23,18 @@ export const HomeIcon = () =>
 
 export const navigationItems = [
   { label: "Home", icon: HomeIcon, to: "/auth" },
-  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/clipping" },
-  { label: "Stream", icon: Radio, to: "/stream" },
-  { label: "Store", icon: ShoppingBag, to: "/store" },
-  { label: "Automation", icon: Workflow, to: "/automation" },
+  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/auth/clipping" },
+  { label: "Stream", icon: Radio, to: "/auth/stream" },
+  { label: "Store", icon: ShoppingBag, to: "/auth/store" },
+  { label: "Automation", icon: Workflow, to: "/auth/automation" },
 ]
 
 
 
 export const mobileNavigationItems = [
   { label: "Home", icon: HomeIcon, to: "/auth" },
-  { label: "Store", icon: ShoppingBag, to: "/store" },
-  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/clipping" },
-  { label: "Stream", icon: Radio, to: "/stream" },
-  { label: "Profile", icon: UserCircle, to: "/profile" },
+  { label: "Store", icon: ShoppingBag, to: "/auth/store" },
+  { label: "videoclip", icon: ScissorsLineDashedIcon, to: "/auth/clipping" },
+  { label: "Stream", icon: Radio, to: "/auth/stream" },
+  { label: "Profile", icon: UserCircle, to: "/auth/profile" },
 ]

@@ -10,9 +10,15 @@ import PagenotFound from "./Components/AlertComponents/PagenotFound"
 
 
 import LandingPage from "./pages/LandingPage"
-import AuthenticatedUser from "./pages/AuthenticatedUser"
+import AuthenticatedUser from "./pages/AuthenticatedUser/AuthenticatedUser"
 import { useEffect, useState } from "react"
 import NetworkError from "./Components/AlertComponents/NetworkError"
+import VideoClipping from "./pages/AuthenticatedUser/VideoClipping"
+import MultiStreaming from "./pages/AuthenticatedUser/MultiStreaming"
+import MyStore from "./pages/AuthenticatedUser/MyStore"
+import Automations from "./pages/AuthenticatedUser/Automations"
+import Profile from "./pages/AuthenticatedUser/Profile"
+import DashboardHome from "./pages/AuthenticatedUser/DashboardHome"
 
 const App = () => {
 
@@ -67,7 +73,14 @@ const App = () => {
 
 
       <Route path="/" element={<LandingPage /> }/>
-      <Route path="/auth" element={<AuthenticatedUser /> }/>
+      <Route path="/auth" element={<AuthenticatedUser />}>
+        <Route index element={<DashboardHome />} />
+        <Route path="clipping" element={<VideoClipping />} />
+        <Route path="stream" element={<MultiStreaming />} />
+        <Route path="store" element={<MyStore />} />
+        <Route path="automation" element={<Automations />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
 
         {/*------------ Auth Routes ----------------*/}
 
@@ -75,6 +88,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/resetpassword" element={<PasswordReset />} />
       <Route path="/verify" element={<Verification />} />
+
 
    {/*------------------ error handlers ----------------- */}
       <Route path='*'  element={<PagenotFound/>}/>
