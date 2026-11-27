@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import { Link } from "react-router-dom"
+import Logo from "../NavBars/Logo"
 
 const Verification = () => {
   const [code, setCode] = useState(Array(6).fill(""))
@@ -49,9 +50,7 @@ const Verification = () => {
   return (
 
 <>
-      <div className="w-full flex fixed top-4 left-4">
-        <Link to="/" className="logo text-lg" aria-label="OnTrib home">OnTrib</Link>
-      </div>
+      <Logo />
 
 
 

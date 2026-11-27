@@ -45,7 +45,7 @@ const Stores = () => {
 
  <div
    ref={carouselRef}
-   className="latest-container flex flex-nowrap items-center mt-10 ml-4 mr-4 mx-auto gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory"
+   className="live-trade-container flex flex-nowrap items-center mt-10 ml-4 mr-4 mx-auto gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory"
  >
                 {storeData.map((store) => (
                   <div

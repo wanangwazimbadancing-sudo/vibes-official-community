@@ -27,7 +27,7 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
     >
       <div className={`flex h-12 items-center ${isExpanded ? "justify-between px-2" : "justify-center"}`}>
         {isExpanded && (
-          <Link to="/" className="logo text-[20px] font-semibold text-zinc-950" aria-label="OnTrib home">
+          <Link to="/auth" className="logo text-[20px] font-semibold text-zinc-950" aria-label="OnTrib home">
             OnTrib
           </Link>
         )}

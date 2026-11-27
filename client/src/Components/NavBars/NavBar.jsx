@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { AlignRight, ChevronRight,  X } from "lucide-react"
+import Logo from "./Logo";
 
 
 const NavBar = () => {
@@ -8,7 +9,7 @@ const NavBar = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const sectionIds = ["About", "Testimonial", "FAQ", "Contact", "Latest", "Store"];
+    const sectionIds = ["About", "Testimonial", "FAQ", "Contact", "LiveTrade", "Store"];
 
     const updateActiveSection = () => {
       const offset = window.innerHeight * 0.25;
@@ -71,9 +72,7 @@ const NavBar = () => {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-[100] flex h-16 items-center justify-between border-b border-zinc-200/80 bg-white/95 px-4 backdrop-blur-md md:hidden">
-        <Link to="/" className="logo text-xl text-black" aria-label="OnTrib home">
-          OnTrib
-        </Link>
+        <Logo />
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}

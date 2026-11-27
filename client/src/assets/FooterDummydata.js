@@ -2,7 +2,7 @@ export   const links = [
 
         {
             title: "Platform",
-            items: [{ name: "Latest", href: "#" }, { name: "Stores", href: "#" },],
+            items: [{ name: "LiveTrade", href: "#" }, { name: "Stores", href: "#" },],
         },
         {
             title: "Resources",

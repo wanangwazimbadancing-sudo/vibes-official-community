@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import Logo from "../NavBars/Logo"
 
 const SignUp = () => {
 
   return (
 <div className="flex flex-col items-center justify-center min-h-screen">
-<div className="w-full flex fixed top-4 left-4"> <Link to="/" className="logo text-lg " aria-label="OnTrib home">OnTrib</Link></div>
+<Logo />
     <legend className="text-2xl font-bold mb-6">Join Now</legend>
             <form className=" text-gray-500 max-w-[340px] mx-4 p-6 text-left text-sm ">
 

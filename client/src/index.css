@@ -28,12 +28,12 @@ justify-content: center;
   min-width: 0;
 }
 
-.latest-container {
+.live-trade-container {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.latest-container::-webkit-scrollbar {
+.live-trade-container::-webkit-scrollbar {
   display: none;
 }
 
