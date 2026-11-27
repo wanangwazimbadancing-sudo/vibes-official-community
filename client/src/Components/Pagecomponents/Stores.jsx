@@ -28,7 +28,7 @@ const Stores = () => {
         type="button"
         aria-label="Scroll to previous items"
         onClick={() => scrollCarousel(-1)}
-        className='w-10 h-10 bg-[#f4f8fb] text-gray-400 rounded-full grid place-items-center'
+        className='w-10 h-10 bg-zinc-800 text-zinc-300 rounded-full grid place-items-center hover:bg-zinc-700'
       >
         <ChevronLeft />
       </button>
@@ -36,7 +36,7 @@ const Stores = () => {
         type="button"
         aria-label="Scroll to next items"
         onClick={() => scrollCarousel(1)}
-        className='w-10 h-10 bg-[#f4f8fb] text-gray-400 rounded-full grid place-items-center'
+        className='w-10 h-10 bg-zinc-800 text-zinc-300 rounded-full grid place-items-center hover:bg-zinc-700'
       >
         <ChevronRight />
       </button>
@@ -50,7 +50,7 @@ const Stores = () => {
                 {storeData.map((store) => (
                   <div
                     key={store.id}
-                    className="relative h-80 w-56 shrink-0 snap-start overflow-hidden rounded-[10px] bg-gray-200"
+                    className="relative h-80 w-56 shrink-0 snap-start overflow-hidden rounded-[10px] bg-zinc-800"
                   >
                     <img
                       src={store.img}

@@ -15,7 +15,7 @@ const handleRetry = () => {
                 <p className="text-sm ml-2">Oops! Your are offline.</p>
             </div>   
 
-             <button onClick={handleRetry}  className=' px-4 py-1 bg-white text-black text-sm rounded'>refresh</button>
+             <button onClick={handleRetry}  className='px-4 py-1 bg-zinc-200 text-zinc-950 text-sm rounded'>refresh</button>
         </div>
 
 

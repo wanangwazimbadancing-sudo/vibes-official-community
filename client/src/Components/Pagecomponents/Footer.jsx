@@ -5,12 +5,12 @@ const Footer = () => {
 
 
             <footer id="Contact" className=" px-4 sm:px-6 md:px-8 lg:px-20">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-gray-200 pb-4">
-                        <p className="text-sm text-zinc-500">&copy; {new Date().getFullYear()} OnTrib. All Rights Reserved.</p>
-                        <a href="termspolicy" target="_blank" className="text-sm text-zinc-500 cursor-pointer">Terms & Policy</a>
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-4 border-t border-zinc-800 pb-4">
+                        <p className="text-sm text-zinc-400">&copy; {new Date().getFullYear()} OnTrib. All Rights Reserved.</p>
+                        <a href="termspolicy" target="_blank" className="text-sm text-zinc-400 cursor-pointer">Terms & Policy</a>
                                                     <div className="flex gap-4">
                                 <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" >
-                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5.44.5 3.777 4.994.37.49.405-.463L14.385.5h1.428l-5.296 6.054-.269.306.246.325 6.479 8.565h-4.296l-4.195-5.484-.37-.486-.403.46-4.822 5.51h-1.43l5.716-6.533.27-.308-.25-.325L1.012.5zM2.822 1.867l9.972 13.036.15.197h2.78l-.607-.801-9.86-13.037-.15-.199h-2.9z" fill="#000" stroke="#90a1b9" /></svg>
+                                    <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m5.44.5 3.777 4.994.37.49.405-.463L14.385.5h1.428l-5.296 6.054-.269.306.246.325 6.479 8.565h-4.296l-4.195-5.484-.37-.486-.403.46-4.822 5.51h-1.43l5.716-6.533.27-.308-.25-.325L1.012.5zM2.822 1.867l9.972 13.036.15.197h2.78l-.607-.801-9.86-13.037-.15-.199h-2.9z" fill="#f4f4f5" stroke="#90a1b9" /></svg>
                                 </a>
                                 <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" >
                                     <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.937 10.486a19.8 19.8 0 0 1 0-8.276 1.65 1.65 0 0 1 1.166-1.158c4.47-.736 9.03-.736 13.5 0A1.67 1.67 0 0 1 16.77 2.21a19.8 19.8 0 0 1 0 8.276 1.65 1.65 0 0 1-1.167 1.159c-4.47.735-9.03.735-13.5 0a1.67 1.67 0 0 1-1.166-1.159" stroke="#90a1b9" strokeLinecap="round" strokeLinejoin="round" /><path d="m7.187 9.466 4.166-2.483L7.187 4.5z" stroke="#90a1b9" strokeLinecap="round" strokeLinejoin="round" /></svg>

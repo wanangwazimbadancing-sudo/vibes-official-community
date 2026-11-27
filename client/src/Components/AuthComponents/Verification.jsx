@@ -61,11 +61,11 @@ const Verification = () => {
 
           
       <form
-        className=" h-[fit-content] text-gray-500 max-w-96 mx-4 md:py-10 md:px-6 px-4 py-8 text-left text-sm"
+        className="h-[fit-content] text-zinc-300 max-w-96 mx-4 md:py-10 md:px-6 px-4 py-8 text-left text-sm"
         onSubmit={handleSubmit}
       >
         <fieldset>
-            <h1 className=" text-2xl font-semibold mb-6 text-center text-gray-800">Email Verify OTP</h1>
+            <h1 className="text-2xl font-semibold mb-6 text-center text-zinc-100">Email Verify OTP</h1>
           <legend className="sr-only text-[#1f1f1f]">Please enter the authentication code</legend>
           <div className="flex items-center justify-between mb-6 gap-2">
             {code.map((digit, index) => (
@@ -74,7 +74,7 @@ const Verification = () => {
                 ref={(element) => {
                   inputs.current[index] = element
                 }}
-                className="otp-input w-10 h-10 border border-gray-300 outline-none rounded text-center text-lg focus:border-gray-700/60 transition duration-300"
+                className="otp-input w-10 h-10 border border-zinc-700 bg-zinc-900 text-zinc-100 outline-none rounded text-center text-lg focus:border-indigo-500 transition duration-300"
                 type="text"
                 inputMode="numeric"
                 pattern="[0-9]*"
@@ -88,7 +88,7 @@ const Verification = () => {
               />
             ))}
           </div>
- {code.every(Boolean) ?( <Link to="/auth" type="submit" className="w-[100px] px-30 my-1 bg-black py-2.5 rounded text-white active:scale-95 transition disabled:cursor-not-allowed disabled:opacity-50" >Verify</Link>):(<p className="cursor-pointer">resend</p>)}
+ {code.every(Boolean) ?( <Link to="/auth" type="submit" className="w-[100px] px-30 my-1 bg-indigo-600 py-2.5 rounded text-white active:scale-95 transition hover:bg-indigo-500 disabled:cursor-not-allowed disabled:opacity-50" >Verify</Link>):(<p className="cursor-pointer text-indigo-300">resend</p>)}
         </fieldset>
       </form>
 </div>

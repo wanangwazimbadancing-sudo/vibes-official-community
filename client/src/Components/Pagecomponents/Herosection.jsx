@@ -54,12 +54,12 @@ const Herosection = () => {
                                 <h1 className="mt-4 text-2xl font-semibold leading-tight sm:text-4xl">
                                     {title}
                                 </h1>
-                                <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-gray-700/75 sm:text-2xl">
+                                <p className="mt-2 max-w-sm text-base font-semibold leading-7 text-zinc-200/85 sm:text-2xl">
                                     {description}
                                 </p>
                                 <Link
                                     to="/join"
-                                    className="mt-7 inline-flex min-h-11 max-w-30 items-center justify-center bg-white/30 backdrop-blur-[12px] px-2 text-base font-medium text-black shadow-md"
+                                    className="mt-7 inline-flex min-h-11 max-w-30 items-center justify-center border border-white/30 bg-black/20 px-3 text-base font-medium text-white shadow-md backdrop-blur-[12px]"
                                 >
                                     Join Now
                                 </Link>
@@ -78,8 +78,8 @@ const Herosection = () => {
                                 onClick={() => setActiveSlide(index)}
                                 className={`h-1.5 w-1.5 rounded-full transition-all duration-300 ${
                                     activeSlide === index
-                                        ? "scale-120 bg-black"
-                                        : "bg-gray-300 hover:bg-gray-400"
+                                        ? "scale-120 bg-white"
+                                        : "bg-zinc-500 hover:bg-zinc-300"
                                 }`}
                             />
                         ))}

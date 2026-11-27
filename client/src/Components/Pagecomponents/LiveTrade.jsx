@@ -38,7 +38,7 @@ const LiveTrade = () => {
         type="button"
         aria-label="Scroll to previous items"
         onClick={() => scrollCarousel(-1)}
-        className='w-10 h-10 bg-[#f4f8fb] text-gray-400 rounded-full grid place-items-center'
+        className='w-10 h-10 bg-zinc-800 text-zinc-300 rounded-full grid place-items-center hover:bg-zinc-700'
       >
         <ChevronLeft />
       </button>
@@ -46,7 +46,7 @@ const LiveTrade = () => {
         type="button"
         aria-label="Scroll to next items"
         onClick={() => scrollCarousel(1)}
-        className='w-10 h-10 bg-[#f4f8fb] text-gray-400 rounded-full grid place-items-center'
+        className='w-10 h-10 bg-zinc-800 text-zinc-300 rounded-full grid place-items-center hover:bg-zinc-700'
       >
         <ChevronRight />
       </button>

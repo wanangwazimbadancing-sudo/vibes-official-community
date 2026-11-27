@@ -6,7 +6,7 @@ const MobileNav = () => {
 
   return (
     <nav
-      className="fixed inset-x-0 bottom-0 z-[70] grid h-[82px] grid-cols-5 items-start border-t border-zinc-200/90 bg-white px-1 pt-3 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(24,24,27,0.06)] md:hidden"
+      className="fixed inset-x-0 bottom-0 z-[70] grid h-[82px] grid-cols-5 items-start border-t border-zinc-800/90 bg-zinc-950 px-1 pt-3 pb-[env(safe-area-inset-bottom)] shadow-[0_-8px_24px_rgba(0,0,0,0.35)] md:hidden"
       aria-label="Mobile navigation"
     >
       {mobileNavigationItems.map(({ label, icon: Icon, to }) => {
@@ -18,12 +18,12 @@ const MobileNav = () => {
             to={to}
             aria-current={active ? "page" : undefined}
             className={`flex min-w-0 flex-col items-center gap-1.5 text-[12px] leading-none transition-colors ${
-              active ? "font-sm " : "text-gray-900"
+              active ? "font-semibold text-white" : "text-zinc-400"
             }`}
           >
             <span
               className={`grid size-10 place-items-center rounded-xl ${
-                active ? "bg-gray-100" : ""
+                active ? "bg-zinc-800" : ""
               }`}
             >
               <Icon

@@ -20,14 +20,14 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
 
   return (
     <aside
-      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-100/80 bg-white px-3 pt-5 text-zinc-900 transition-[width] duration-300 ${
+      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-800/80 bg-zinc-950 px-3 pt-5 text-zinc-100 transition-[width] duration-300 ${
         isExpanded ? "w-[260px]" : "w-[70px]"
       }`}
       aria-label="Primary navigation"
     >
       <div className={`flex h-12 items-center ${isExpanded ? "justify-between px-2" : "justify-center"}`}>
         {isExpanded && (
-          <Link to="/auth" className="logo text-[20px] font-semibold text-zinc-950" aria-label="OnTrib home">
+          <Link to="/auth" className="logo text-[20px] font-semibold text-white" aria-label="OnTrib home">
             OnTrib
           </Link>
         )}
@@ -36,7 +36,7 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
           onClick={toggleSidebar}
           aria-label={isExpanded ? "Collapse sidebar" : "Expand sidebar"}
           aria-expanded={isExpanded}
-          className="grid size-9 place-items-center rounded-lg text-zinc-800 transition-colors hover:bg-zinc-100 hover:text-zinc-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-950"
+          className="grid size-9 place-items-center rounded-lg text-zinc-300 transition-colors hover:bg-zinc-800 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           <PanelLeft size={21} strokeWidth={1.8} className=" absolute" />
         </button>
@@ -56,8 +56,8 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
                 isExpanded ? "gap-3 px-3" : "justify-center"
               } ${
                 active
-                  ? "bg-zinc-100 font-semibold text-zinc-950"
-                  : "text-zinc-900 hover:bg-zinc-50 hover:text-zinc-950"
+                  ? "bg-zinc-800 font-semibold text-white"
+                  : "text-zinc-300 hover:bg-zinc-900 hover:text-white"
               }`}
             >
               <Icon size={21} strokeWidth={active ? 2.5 : 1.8} aria-hidden="true" />
