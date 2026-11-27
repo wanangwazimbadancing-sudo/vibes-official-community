@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { AlignRight, ChevronRight,  X } from "lucide-react"
-import Logo from "./Logo";
 
 
 const NavBar = () => {
@@ -72,7 +71,9 @@ const NavBar = () => {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-[100] flex h-16 items-center justify-between border-b border-zinc-800/80 bg-zinc-950/95 px-4 text-zinc-100 backdrop-blur-md md:hidden">
-        <Logo />
+        <Link to="/" className="logo text-lg" aria-label="OnTrib home">
+          OnTrib
+        </Link>
         <button
           type="button"
           onClick={() => setOpen((current) => !current)}

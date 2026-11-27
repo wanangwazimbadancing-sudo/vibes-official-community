@@ -59,7 +59,7 @@ const Herosection = () => {
                                 </p>
                                 <Link
                                     to="/join"
-                                    className="mt-7 inline-flex min-h-11 max-w-30 items-center justify-center border border-white/30 bg-black/20 px-3 text-base font-medium text-white shadow-md backdrop-blur-[12px]"
+                                    className="mt-7 inline-flex min-h-11 max-w-30 items-center justify-center  bg-black px-3 text-base font-medium text-white shadow-md backdrop-blur-[12px]"
                                 >
                                     Join Now
                                 </Link>

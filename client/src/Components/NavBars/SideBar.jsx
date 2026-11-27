@@ -20,7 +20,7 @@ const SideBar = ({ expanded = true, onExpandedChange }) => {
 
   return (
     <aside
-      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col border-r border-zinc-800/80 bg-zinc-950 px-3 pt-5 text-zinc-100 transition-[width] duration-300 ${
+      className={`sticky top-0 z-20 flex h-screen shrink-0 flex-col  bg-zinc-950 px-3 pt-5 text-zinc-100 transition-[width] duration-300 ${
         isExpanded ? "w-[260px]" : "w-[70px]"
       }`}
       aria-label="Primary navigation"
