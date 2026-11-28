@@ -26,7 +26,6 @@ const AuthenticatedUser = () => {
         />
       </div>
       <main className="relative z-10 min-w-0 flex-1 pb-[82px] md:pb-0">
-        <AuthNavTop />
         <Outlet />
       </main>
       <MobileNav />

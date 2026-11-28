@@ -2,7 +2,7 @@ import {Plus, Search} from 'lucide-react'
 import { Link } from 'react-router-dom'
 const AuthNavTop = () => {
   return (
-                  <div className="sticky z-11111 w-full h-[50px] top-0 right-0 bg-zinc-950/95 text-zinc-100 backdrop-blur-md p-4 items-center flex justify-between">
+                  <div className="sticky z-11111 w-full h-[50px] top-0 right-0 bg-zinc-950/85 text-zinc-100 border-b border-zinc-900 backdrop-blur-md p-4 items-center flex justify-between">
 
                 
                 

@@ -1,10 +1,11 @@
-import Herosection from "../../Components/Pagecomponents/Herosection"
+import AuthNavTop from "../../Components/NavBars/AuthNavTop"
 import LiveTrade from "../../Components/Pagecomponents/LiveTrade"
 import Stores from "../../Components/Pagecomponents/Stores"
 
 const DashboardHome = () => (
   <>
-    <Herosection />
+  
+    <AuthNavTop />
     <Stores />
     <LiveTrade />
   </>

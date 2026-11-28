@@ -61,7 +61,7 @@ const LiveTrade = () => {
     {liveTrades.map(({ id, host, viewers }, index) => (
       <article
         key={id}
-        className="relative flex h-80 w-56 shrink-0 snap-start flex-col justify-between overflow-hidden rounded-[10px] bg-zinc-900 p-4 text-white"
+        className="relative flex h-80 w-56 shrink-0 snap-start flex-col justify-between overflow-hidden rounded-[10px] bg-zinc-900 p-4 text-white hover:border hover:border-[#acca00]"
       >
         <img
           src={storeData[index % storeData.length].img}
@@ -73,7 +73,7 @@ const LiveTrade = () => {
         <span className="relative z-10 w-fit rounded-full bg-red-600 px-3 py-1 text-xs font-semibold tracking-wide">
           LIVE
         </span>
-        <div className="relative z-10 mt-auto rounded-lg bg-black/70 p-3">
+        <div className="relative z-10 mt-auto rounded-lg bg-white/20 backdrop-blur-xl p-3">
           <p className="font-semibold">{host}</p>
           <p className="mt-1 flex items-center gap-1.5 text-sm text-white/90">
             <Eye size={16} aria-hidden="true" />

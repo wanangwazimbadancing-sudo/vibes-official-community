@@ -50,7 +50,7 @@ const Stores = () => {
                 {storeData.map((store) => (
                   <div
                     key={store.id}
-                    className="relative h-80 w-56 shrink-0 snap-start overflow-hidden rounded-[10px] bg-zinc-800"
+                    className="relative h-80 w-56 shrink-0 snap-start overflow-hidden rounded-[10px] bg-zinc-800 hover:border hover:border-[#acca00]"
                   >
                     <img
                       src={store.img}
